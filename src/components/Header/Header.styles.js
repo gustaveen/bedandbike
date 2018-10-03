@@ -6,15 +6,14 @@ export const HeaderRoot = styled.div`
   width: 100%;
   font-family: $heading;
   font-weight: 500;
-  z-index: $z-index--header;
 `;
 
 export const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 4%;
+  margin-right: 4%;
   padding: 15px 20px;
   @media ${breakpoints.md} {  
     padding-top: 15px;

@@ -2,6 +2,11 @@ import React from 'react'
 import Img from 'gatsby-image'
 // import { FormattedMessage } from 'react-intl';
 
+import {
+    HeroRoot,
+    HeroTitle,
+} from './Hero.styles';
+
 class Hero extends React.Component {
 
   render() {
@@ -9,12 +14,12 @@ class Hero extends React.Component {
     console.log(image);
     
     return(
-      <div className="Hero">
+      <HeroRoot>
         <Img fluid={image} 
-          alt="heero"
+          alt="hero"
         />
-        <h1 className="Hero__Title">Välkommen till Öckero</h1>
-      </div>
+        <HeroTitle>Välkommen till Öckero</HeroTitle>
+      </HeroRoot>
     );
   }
 }

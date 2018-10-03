@@ -1,0 +1,36 @@
+.BookingBar {
+
+    &__Container {
+        @extend .wrap;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 24px;
+        padding-bottom: 24px;
+
+        @include media(md) {
+            padding-top: 32px;
+            padding-bottom: 32px;
+        }
+    }
+
+    &__Title {
+        font-size: 2rem;
+        font-weight: $black;
+    }
+
+    &__Button {
+        padding: 19px 35px;
+        font-size: 1.4rem;
+        font-weight: $bold;
+        text-transform: uppercase;
+        color: white;
+        background-color: $blue;
+        text-decoration: none;
+        box-shadow: 0 2px 14px rgba(0, 0, 0, 0.3);
+
+        &:hover {
+            background-color: $blue-5;
+        }
+    }
+}
