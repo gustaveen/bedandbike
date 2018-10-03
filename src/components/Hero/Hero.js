@@ -7,21 +7,18 @@ import {
     HeroTitle,
 } from './Hero.styles';
 
-class Hero extends React.Component {
-
-  render() {
-    const { image } = this.props;
-    console.log(image);
-    
-    return(
-      <HeroRoot>
-        <Img fluid={image} 
-          alt="hero"
-        />
-        <HeroTitle>Välkommen till Öckero</HeroTitle>
-      </HeroRoot>
-    );
-  }
+const Hero = (props) => {
+  const { image } = props;
+  console.log(image);
+  
+  return(
+    <HeroRoot>
+      <Img fluid={image} 
+        alt="hero"
+      />
+      <HeroTitle>Välkommen till Öckero</HeroTitle>
+    </HeroRoot>
+  );
 }
 
 export default Hero;
