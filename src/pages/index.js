@@ -1,14 +1,16 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-// import Img from 'gatsby-image'
-// import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 import Hero from '../components/Hero'
+import BookingBar from '../components/BookingBar'
 
 const IndexPage = (props) => (
   <Layout>
-    <Hero image={props.data.heroImage.childImageSharp.fluid} /> 
+    <Hero image={props.data.heroImage.childImageSharp.fluid} />
+    <BookingBar />
+    {/* <Intro/>
+    <Rooms/> */}
   </Layout>
 )
 
