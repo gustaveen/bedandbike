@@ -1,0 +1,155 @@
+.Rooms {
+    $path: #{map-get($paths, 'svg')};
+
+    &__Container {
+        @extend .wrap;
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        @include media(md) {
+            padding-top: 64px;
+            padding-bottom: 64px;
+        }
+    }
+
+    &__Item {
+        margin-bottom: 30px;
+    }
+
+    &__Header {
+        margin-bottom: 24px;
+    }
+
+    &__Title {
+        font-size: 2rem;
+        font-weight: $bold;
+    }
+
+    &__Link {
+        display: inline-block;
+        margin-right: 12px;
+        padding-bottom: 12px;
+        color: black;
+        font-size: 1.4rem;
+        font-weight: $medium;
+        text-decoration: none;
+        opacity: 0.3;
+        transition: opacity .15s ease-out;
+
+        &--Active,
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &__Content {
+        padding-top: 14px;
+        border-top: 1px solid $gray-20;
+    }
+
+    &__Item {
+        display: flex;
+        background-color: $gray;
+
+    }
+
+    &__Info {
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 auto;
+        width: 40%;
+        padding: 54px 38px 38px;
+    }
+
+    &__InfoHeader {
+        flex-grow: 1;
+    }
+
+    &__ItemTitle {
+        margin-bottom: 8px;
+        font-size: 2.4rem;
+        font-weight: $bold; 
+    }
+
+    &__Meta {
+        display: inline-block;
+        margin-right: 14px;
+        font-size: 1.4rem;
+
+        &:before {
+            position: relative;
+            content: '';
+            display: inline-block;
+            width: 15px;
+            height: 13px;
+            margin-right: 5px;
+            background-repeat: no-repeat; 
+        }
+
+        &--Pers:before {
+            top: 1px;
+            background-image: url('#{$path}/person.svg');
+        }
+
+        &--Beds:before {
+            top: 2px;
+            background-image: url('#{$path}/bed.svg');
+        }
+
+        &--Beds {
+        margin-bottom: 20px;
+        }
+    }
+
+    &__Text {
+        font-size: 1.8rem;
+        line-height: 1.33;
+        color: $gray-70;
+    }
+
+    &__Image {
+        position: relative;
+        width: 60%;
+
+        img {
+            width: 100%;
+            height: 100%;;
+            object-fit: cover;
+        }
+    }
+
+    &__Action {
+        display: flex;
+        justify-self: flex-end;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding-top: 24px;
+        border-top: 1px solid $gray-20; 
+
+        @include media(md) {
+            padding-top: 32px;
+        }
+    }
+
+    &__PriceText {
+        font-weight: $bold;
+        @include u-text(price);
+    }
+    
+    &__Button {
+        padding: 19px 35px;
+        font-size: 1.4rem;
+        font-weight: $bold;
+        text-transform: uppercase;
+        color: white;
+        background-color: $blue;
+        text-decoration: none;
+        box-shadow: 0 2px 14px rgba(0, 0, 0, 0.3);
+
+        &:hover {
+            background-color: $blue-5;
+        }
+    }
+
+}

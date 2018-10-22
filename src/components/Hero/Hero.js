@@ -9,8 +9,6 @@ import {
 
 const Hero = (props) => {
   const { image } = props;
-  console.log(image);
-  
   return(
     <HeroRoot>
       <Img fluid={image} 

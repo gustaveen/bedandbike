@@ -4,7 +4,7 @@ import Language from '../Language'
 // import Link from 'gatsby-link'
 
 // import NavMain from '../NavMain';
-// import SelectLanguage from '../SelectLanguage';
+
 
 import logo from '../../assets/svg/logo.svg'
 import {
