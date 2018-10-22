@@ -1,6 +1,6 @@
 import React from 'react'
 // import Link from 'gatsby-link'
-// import { FormattedMessage } from 'react-intl';
+import { FormattedHTMLMessage } from 'react-intl';
 
 import bike from '../../assets/svg/bike.svg'
 
@@ -54,8 +54,7 @@ const Intro = () => {
       <IntroContainer>
         <IntroIcon src={bike} alt="logo" />
         <IntroText>
-            {/* <FormattedMessage id="introText" /> */}
-            Välkommen till Bed & Bike Öckerö, en pärla för aktiviteter och rekreation. Hos oss kan du njuta av husets lugn, vackra rum och nyttig frukost. Du kan hyra cykel och kajak. Vi kan erbjuda förslag på turer såväl med <strong>cykel</strong>, <strong>kajak</strong> som <strong>vandring</strong>.
+            <FormattedHTMLMessage id="introText" />
         </IntroText>
       </IntroContainer>
     </IntroRoot>

@@ -52,7 +52,6 @@ const BookingBar = () => (
       Boka rum  
     </Button>
   </BookingBarContainer>
-
 )
 
 export default BookingBar;
