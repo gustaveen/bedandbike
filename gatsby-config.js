@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Bed and bike Öckerö',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

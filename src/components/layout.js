@@ -7,8 +7,9 @@ import { injectIntl } from 'react-intl'
 
 import Header from './Header'
 import './layout.css'
+import favicon from '../assets/favicons/favicon-32x32.png';
 
-const Layout = ({ children }) => (
+const Layout = ({ children, langKey }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -24,11 +25,13 @@ const Layout = ({ children }) => (
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
+            { name: 'description', content: 'Bed and bike Öckerö' },
+          ]}
+          link={[
+            { rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }
           ]}
         >
-          <html lang="en" />
+          <html lang={langKey} />
         </Helmet>
         <Header />
         <div>

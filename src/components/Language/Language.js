@@ -71,7 +71,7 @@ class Language extends Component {
 
   componentDidMount() {
     const { language } = this.context
-    console.log(language);
+    console.log(this.context);
     this.setState({
       value: language.locale || language.detected,
     })
@@ -96,7 +96,6 @@ class Language extends Component {
     const { language } = this.context
     const { languages } = language
     const { value } = this.state
-    console.log(value);
 
     if (!value) {
       return null

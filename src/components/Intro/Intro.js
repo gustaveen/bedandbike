@@ -19,7 +19,7 @@ const IntroContainer = styled.div`
   padding-bottom: 32px;
   text-align: center;
 
-  @media ${breakpoints.md} {  
+  @media ${breakpoints.ml} {  
     padding-top: 32px;
     padding-bottom: 32px;
   }
@@ -36,14 +36,20 @@ const IntroIcon = styled.img`
 `;
 
 const IntroText = styled.h2`
-  font-size: 1.8rem; 
+  font-size: 1.6rem; 
   line-height: 1.4;
+  padding-left: 2rem;
+  padding-right: 2rem;
 
   @media ${breakpoints.md} {  
+    font-size: 2rem;
+  }
+
+  @media ${breakpoints.ml} {  
     font-size: 2.2rem;
   }
 
-  @media ${breakpoints.md} {  
+  @media ${breakpoints.lg} {  
     font-size: 2.6rem;
   }
 `;

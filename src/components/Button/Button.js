@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components';
+import { breakpoints } from '../breakpoints';
 
 const StyledButton = styled.a`
-  padding: 19px 35px;
-  font-size: 1.4rem;
+  padding: 12px 25px;
+  font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
   color: white;
@@ -14,6 +15,11 @@ const StyledButton = styled.a`
 
   &:hover {
       background-color: ${props => props.theme.palette.blue.dark};
+  }
+
+  @media ${breakpoints.md} {
+    padding: 19px 35px;
+    font-size: 1.4rem;
   }
 `;
 

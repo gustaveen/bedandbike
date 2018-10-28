@@ -14,14 +14,14 @@ import theme from '../components/theme'
 
 const IndexPage = (props) => (
   <ThemeProvider theme={theme}>
-    <Layout>
+    <Layout langKey={props.pageContext.locale}>
       <Hero image={props.data.heroImage.childImageSharp.fluid} />
-      <BookingBar />
+      {/* <BookingBar /> */}
       <Intro/>
       <Rooms/>
-      <Link to="/page-2/">
+      {/* <Link to="/page-2/">
         <FormattedMessage id="navRooms" />
-      </Link>
+      </Link> */}
     </Layout>
   </ThemeProvider>
 )
@@ -30,9 +30,9 @@ export default withIntl(IndexPage)
 
 export const pageQuery = graphql`
   query {
-    heroImage: file(relativePath: { regex: "/_DSC8847.jpg/" }) {
+    heroImage: file(relativePath: { regex: "/boats.jpg/" }) {
       childImageSharp {
-        fluid(maxWidth: 2480) {
+        fluid(maxWidth: 1900) {
           ...GatsbyImageSharpFluid
         }
       }

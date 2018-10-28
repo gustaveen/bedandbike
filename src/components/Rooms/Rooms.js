@@ -14,17 +14,52 @@ import room4Img from '../../assets/images/rum-4.jpg'
 import pers from '../../assets/svg/person.svg'
 import bed from '../../assets/svg/bed.svg'
 
+const RoomsRoot = styled.div`
+  max-width: calc(1220px + 8%);
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @media(min-width: 720px) {
+      padding-top: 64px;
+      padding-bottom: 64px;
+  }
+`;
+
+const RoomsContainer = styled.div`
+  margin-left: 4%;
+  margin-right: 4%;
+`;
+
+const RoomsHeader = styled.div`
+  margin-bottom: 24px;
+`;
+
+const RoomsTitle = styled.h2`
+  font-size: 2rem;
+  font-weight: bold;
+`;
+
 const RoomRoot = styled.div`
-  display: flex;
+  margin-bottom: 30px;
   background: ${props => props.theme.palette.gray.main};
+
+  @media ${breakpoints.ml} {
+    display: flex;
+  }
 `;
 
 const RoomInfo = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1 0 auto;
-  width: 40%;
-  padding 54px 38px 38px;
+  padding 24px 24px 32px;
+
+  @media ${breakpoints.ml} {  
+    width: 40%;
+    padding 54px 38px 38px;
+  }
 `;
 
 const RoomInfoHeader = styled.div`
@@ -33,8 +68,12 @@ const RoomInfoHeader = styled.div`
 
 const RoomTitle = styled.p`
   margin-bottom: 8px;
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: bold;
+
+  @media ${breakpoints.ml} {  
+    font-size: 2.4rem;
+  }
 `;
 
 const RoomAction = styled.div`
@@ -44,16 +83,19 @@ const RoomAction = styled.div`
   align-items: center;
   width: 100%;
   padding-top: 24px;
-  border-top: 1px solid ${props => props.theme.palette.gray.main}; 
+  border-top: 1px solid #E1E1E1; 
 
-  @media ${breakpoints.md} {
+  @media ${breakpoints.ml} {
       padding-top: 32px;
   }
 `;
 
 const RoomImage = styled.div`
   position: relative;
-  width: 60%;
+
+  @media ${breakpoints.ml} {
+    width: 60%;
+  }
 
   img {
       width: 100%;
@@ -63,9 +105,14 @@ const RoomImage = styled.div`
 `;
 
 const RoomText = styled.p`
-  font-size: 1.8rem;
+  margin-bottom: 24px;
+  font-size: 1.6rem;
   line-height: 1.33;
   color: ${props => props.theme.palette.gray.dark};
+
+  @media ${breakpoints.ml} {
+    font-size: 1.8rem;
+  }
 `;
 
 const PriceText = styled.p`
@@ -76,6 +123,7 @@ const PriceText = styled.p`
 
 const Meta = styled.span`
   display: inline-block;
+  margin-bottom: 20px;
   margin-right: 14px;
   font-size: 1.4rem;
   
@@ -109,21 +157,21 @@ class Rooms extends React.PureComponent {
         name: 'room1',
         people: '2-3',
         bed: '2 x 90 cm',
-        price: '950 kr',
+        price: '1050 kr',
         img: room1Img,
       },
       {
         name: 'room2',
         people: '2',
         bed: '2 x 90 cm',
-        price: '950 kr',
+        price: '1050 kr',
         img: room2Img,
       },
       {
         name: 'room3',
         people: '2',
         bed: '2 x 90 cm',
-        price: '950 kr',
+        price: '1050 kr',
         img: room3Img,
       },
       {
@@ -143,31 +191,31 @@ class Rooms extends React.PureComponent {
     const rum = 'room1';
 
     return (
-      <section className="Rooms">
-        <div className="Rooms__Container">
-          <div className="Rooms__Header">
-            <h2 className="Rooms__Title">
+      <RoomsRoot>
+        <RoomsContainer>
+          <RoomsHeader>
+            <RoomsTitle>
               <FormattedMessage id="room" />
-        </h2>
-  </div>
-  <div className="Rooms__Menu">
-  <a href="" className="Rooms__Link Rooms__Link--Active"><FormattedMessage id={`${rum}.title`} /></a>
-  <a href="" className="Rooms__Link"><FormattedMessage id="room2.title" /></a>
-  <a href="" className="Rooms__Link"><FormattedMessage id="room3.title" /></a>
-  <a href="" className="Rooms__Link"><FormattedMessage id="room4.title" /></a>
-  </div>
-  <div className="Rooms__Content">
-  {rooms.map((room, index) =>
-    <Room
-        key={index}
-        room={room}
-        index={index}
-        active={this.state}
-    />
-  )}
-  </div>
-  </div>
-  </section>
+            </RoomsTitle>
+          </RoomsHeader>
+          {/* <div className="Rooms__Menu">
+            <a href="" className="Rooms__Link Rooms__Link--Active"><FormattedMessage id={`${rum}.title`} /></a>
+            <a href="" className="Rooms__Link"><FormattedMessage id="room2.title" /></a>
+            <a href="" className="Rooms__Link"><FormattedMessage id="room3.title" /></a>
+            <a href="" className="Rooms__Link"><FormattedMessage id="room4.title" /></a>
+          </div> */}
+          <div className="Rooms__Content">
+            {rooms.map((room, index) =>
+              <Room
+                  key={index}
+                  room={room}
+                  index={index}
+                  active={this.state}
+              />
+            )}
+          </div>
+        </RoomsContainer>
+      </RoomsRoot>
   );
   }
 }
@@ -180,7 +228,7 @@ const Room = ({room, index, active}) => {
       <RoomInfoHeader>
         <RoomTitle><FormattedMessage id={`${room.name}.title`} /></RoomTitle>
         <Meta img={pers}>
-          {room.people}<FormattedMessage id="guests" />
+          {`${room.people} `}<FormattedMessage id="guests" />
         </Meta>
         <Meta img={bed}>
           {room.bed}

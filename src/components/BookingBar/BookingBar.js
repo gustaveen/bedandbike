@@ -5,12 +5,10 @@ import React from 'react'
 import styled from 'styled-components';
 import { breakpoints } from '../breakpoints';
 
-const BookingBarContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: 4%;
-  margin-right: 4%;
+const StyledBookingBar = styled.div`
+  max-width: calc(1220px + 8%);
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 24px;
   padding-bottom: 24px;
 
@@ -18,6 +16,14 @@ const BookingBarContainer = styled.div`
   padding-top: 32px;
   padding-bottom: 32px;
   }
+`;
+
+const BookingBarContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 4%;
+  margin-right: 4%;
 `;
 
 const Title = styled.h2`
@@ -41,17 +47,19 @@ const Button = styled.a`
 `;
 
 const BookingBar = () => (
-  <BookingBarContainer>
-    <Title>
-      Boka din vistelse redan idag
-      {/* <FormattedMessage id="bookingBarTitle" /> */}
-    </Title>
-    <Button
-      href="#"
-    >
-      Boka rum  
-    </Button>
-  </BookingBarContainer>
+  <StyledBookingBar>
+    <BookingBarContainer>
+      <Title>
+        Boka din vistelse redan idag
+        {/* <FormattedMessage id="bookingBarTitle" /> */}
+      </Title>
+      <Button
+        href="#"
+      >
+        Boka rum  
+      </Button>
+    </BookingBarContainer>
+  </StyledBookingBar>
 )
 
 export default BookingBar;
