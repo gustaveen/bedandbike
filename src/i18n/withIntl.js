@@ -13,7 +13,6 @@ export default ComposedComponent => {
 
     constructor(props) {
       super()
-      console.log(props)
       const { pageContext } = props
       const { locale, languages, originalPath } = pageContext
 

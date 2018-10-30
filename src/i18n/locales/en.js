@@ -33,5 +33,13 @@ module.exports = {
   'cleaning': 'Cleaning',
   'contactTitle': 'Contact/booking',
   'contactText': 'For more info and bookings, email us at',
-  'bookingBarTitle': 'Book your stay at'
+  'bookingBarTitle': 'Book your stay at',
+  'from': 'From',
+  'to': 'To',
+  'checkIn': 'Check in',
+  'checkOut': 'Check out',
+  'booking': 'Request to Book',
+  'message': 'Message',
+  'send': 'Send',
+  'email': 'E-mail'
 };

@@ -15,10 +15,6 @@ const LanguageContainer = styled.div`
   position: relative;
 `;
 
-// const LanguageLabel = styled.div`
-//   display: none;
-// `;
-
 const TitleContainer = styled.div`
   position: relative;
 `;
@@ -28,7 +24,7 @@ const Title = styled.span`
   position: relative;
   padding-right: 18px;
   font-size: 1.2rem;
-  color: #8B8B8B;
+  color: ${props => props.theme.palette.gray.dark};
   font-weight: 400;
   line-height: 1.4;
   letter-spacing: 0.8px;
@@ -71,7 +67,6 @@ class Language extends Component {
 
   componentDidMount() {
     const { language } = this.context
-    console.log(this.context);
     this.setState({
       value: language.locale || language.detected,
     })

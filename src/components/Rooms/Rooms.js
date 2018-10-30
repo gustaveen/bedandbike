@@ -1,11 +1,12 @@
 import React from 'react'
-// import Link from 'gatsby-link'
+import { graphql } from 'gatsby'
 import { FormattedMessage } from 'react-intl';
 
 import styled from 'styled-components';
 import { breakpoints } from '../breakpoints';
 
-import Button from '../Button'
+// import Button from '../Button'
+import Room from './Room'
 
 import room1Img from '../../assets/images/rum-1.jpg'
 import room2Img from '../../assets/images/rum-2.jpg'
@@ -105,7 +106,6 @@ const RoomImage = styled.div`
 `;
 
 const RoomText = styled.p`
-  margin-bottom: 24px;
   font-size: 1.6rem;
   line-height: 1.33;
   color: ${props => props.theme.palette.gray.dark};
@@ -159,6 +159,7 @@ class Rooms extends React.PureComponent {
         bed: '2 x 90 cm',
         price: '1050 kr',
         img: room1Img,
+        test: '/rum-1.jpg/',
       },
       {
         name: 'room2',
@@ -166,6 +167,7 @@ class Rooms extends React.PureComponent {
         bed: '2 x 90 cm',
         price: '1050 kr',
         img: room2Img,
+        test: '/rum-1.jpg/',
       },
       {
         name: 'room3',
@@ -173,6 +175,7 @@ class Rooms extends React.PureComponent {
         bed: '2 x 90 cm',
         price: '1050 kr',
         img: room3Img,
+        test: '/rum-1.jpg/',
       },
       {
         name: 'room4',
@@ -180,6 +183,7 @@ class Rooms extends React.PureComponent {
         bed: '1 x 120 cm',
         price: '500 kr',
         img: room4Img,
+        test: '/rum-1.jpg/',
        }
     ];
 
@@ -189,7 +193,7 @@ class Rooms extends React.PureComponent {
   render() {
     const rooms = this.getInitialValues();
     const rum = 'room1';
-
+    const { images } = this.props;
     return (
       <RoomsRoot>
         <RoomsContainer>
@@ -209,6 +213,7 @@ class Rooms extends React.PureComponent {
               <Room
                   key={index}
                   room={room}
+                  image={images[index]}
                   index={index}
                   active={this.state}
               />
@@ -219,37 +224,6 @@ class Rooms extends React.PureComponent {
   );
   }
 }
-
-const Room = ({room, index, active}) => {
-
-  return (
-  <RoomRoot>
-    <RoomInfo>
-      <RoomInfoHeader>
-        <RoomTitle><FormattedMessage id={`${room.name}.title`} /></RoomTitle>
-        <Meta img={pers}>
-          {`${room.people} `}<FormattedMessage id="guests" />
-        </Meta>
-        <Meta img={bed}>
-          {room.bed}
-        </Meta>
-        <RoomText><FormattedMessage id={`${room.name}.text`} /></RoomText>
-      </RoomInfoHeader>
-      <RoomAction>
-        <div className="Rooms__Price">
-          <RoomText>Pris</RoomText>
-          <PriceText>{room.price}</PriceText>
-        </div>
-        <Button>Boka</Button>
-      </RoomAction>
-    </RoomInfo>
-    <RoomImage>
-      <img src={room.img} alt=""/>
-    </RoomImage>
-  </RoomRoot>
-  );
-};
-
 
 export default Rooms;
 

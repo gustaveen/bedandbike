@@ -33,5 +33,13 @@ module.exports = {
   'cleaning': 'Städning',
   'contactTitle': 'Kontakt/Boka',
   'contactText': 'För mer info och bokningar, maila oss på',
-  'bookingBarTitle': 'Boka din vistelse hos oss redan idag!'
+  'bookingBarTitle': 'Boka din vistelse hos oss redan idag!',
+  'from': 'Från',
+  'to': 'Till',
+  'checkIn': 'Incheckning',
+  'checkOut': 'Utcheckning',
+  'booking': 'Bokningsförfrågan',
+  'message': 'Meddelande',
+  'send': 'Skicka',
+  'email': 'E-post'
 };

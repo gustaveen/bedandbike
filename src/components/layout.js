@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 // import ThemeProvider from './ThemeProvider'
 import { StaticQuery, graphql } from 'gatsby'
-import { injectIntl } from 'react-intl'
+import { injectIntl} from 'react-intl'
 
 import Header from './Header'
 import './layout.css'
