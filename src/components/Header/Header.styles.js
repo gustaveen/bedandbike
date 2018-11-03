@@ -4,7 +4,6 @@ import { breakpoints } from '../breakpoints';
 export const HeaderRoot = styled.div`
   display: flex;
   width: 100%;
-  font-family: $heading;
   font-weight: 500;
 `;
 
