@@ -1,9 +1,5 @@
 import React from 'react'
-// import { Link } from '../i18n'
 import Language from '../Language'
-// import Link from 'gatsby-link'
-
-// import NavMain from '../NavMain';
 
 
 import logo from '../../assets/svg/logo.svg'
