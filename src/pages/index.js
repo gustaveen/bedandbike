@@ -1,10 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-
-import { FormattedMessage } from 'react-intl'
 import { withIntl, Link } from '../i18n'
 import { ThemeProvider } from 'styled-components';
-import Img from 'gatsby-image';
+import { FormattedMessage } from 'react-intl';
+// import Img from 'gatsby-image';
 
 import Layout from '../components/layout'
 import Hero from '../components/Hero'
@@ -12,12 +11,17 @@ import Hero from '../components/Hero'
 import Booking from '../components/Booking'
 import Intro from '../components/Intro'
 import Rooms from '../components/Rooms'
+import Info from '../components/Info'
 import theme from '../components/theme'
+
 
 const IndexPage = (props) => (
   <ThemeProvider theme={theme}>
     <Layout langKey={props.pageContext.locale}>
-      <Hero image={props.data.heroImage.childImageSharp.fluid} />
+      <Hero
+        image={props.data.heroImage.childImageSharp.fluid}
+        title={<FormattedMessage id="introTitle" />} 
+      />
       {/* <BookingBar /> */}
       <Intro/>
       <Rooms
@@ -32,9 +36,7 @@ const IndexPage = (props) => (
         <FormattedMessage id="navRooms" />
       </Link> */}
       <Booking />
-      <Img fluid={props.data.mapImage.childImageSharp.fluid} 
-        alt="hero"
-      />
+      <Info />
     </Layout>
   </ThemeProvider>
 )

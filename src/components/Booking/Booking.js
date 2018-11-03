@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { navigateTo } from "gatsby-link";
 import moment from 'moment';
 import Helmet from 'react-helmet';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
@@ -44,7 +45,6 @@ const BookingContainer = styled.div`
 `;
 
 const Title = styled.h3`
-  margin-bottom: 15px;
   font-size: 1.8rem;
   font-weight: bold;
   text-align: left;
@@ -55,6 +55,7 @@ const Title = styled.h3`
 `;
 
 const Label = styled.p`
+  margin-top: 20px;
   margin-bottom: 10px;
   font-size: 1.6rem;
   font-weight: bold;
@@ -64,7 +65,6 @@ const Label = styled.p`
 const Email = styled.input`
   height: 50px;
   width: 100%;
-  margin-bottom: 20px;
   padding: .5em 1em;
   border: 1px solid #F1F1F1;
   border-radius: 4px;
@@ -93,14 +93,33 @@ const ButtonContainer = styled.div`
   text-align: right;
 `;
 
+const Error = styled.div`
+  padding-top: 5px;
+  color: red;
+  text-align: left;
+`;
+
+const encode = (data) => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
+
 class Booking extends React.Component {
   constructor(props) {
     super(props);
-    this.handleFromChange = this.handleFromChange.bind(this);
-    this.handleToChange = this.handleToChange.bind(this);
-    this.state = {
+    this.state = this.getInitialState();
+  }
+
+  getInitialState = () => {
+    return {
       from: undefined,
       to: undefined,
+      email: '',
+      submitted: false,
+      inputErrors: {
+        email: '',
+      }
     };
   }
 
@@ -108,7 +127,22 @@ class Booking extends React.Component {
     language: PropTypes.object,
   }
 
-  showFromMonth() {
+  validateInput = (email) => {
+    const {
+      inputErrors,
+    } = this.state;
+    console.log(email);
+    inputErrors.email = (email === '');
+    console.log(inputErrors);
+    this.setState({
+      inputErrors,
+    });
+    return (
+      email !== ''
+    );
+  }
+
+  showFromMonth = () => {
     const { from, to } = this.state;
     if (!from) {
       return;
@@ -117,24 +151,54 @@ class Booking extends React.Component {
       this.to.getDayPicker().showMonth(from);
     }
   }
-  handleFromChange(from) {
+  handleFromChange = (from) => {
     // Change the from date and focus the "to" input field
     this.setState({ from });
   }
-  handleToChange(to) {
+  handleToChange = (to) => {
     this.setState({ to }, this.showFromMonth);
   }
 
+  handleChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
+  handleSubmit = e => {
+    const {
+      email,
+    } = this.state;
+    e.preventDefault();
+
+    if (!this.validateInput(email)) {
+      return;
+    }
+    const form = e.target;
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        ...this.state
+      })
+    })
+      .then(() => navigateTo(form.getAttribute("action")))
+      .catch(error => alert(error));
+  };
+
   render() {
     const { language } = this.context;
-    const { image } = this.props;
+    const { 
+      from,
+      inputErrors,
+      to, 
+    } = this.state;
+    
     const { locale } = language;
     moment.locale(locale);
     const today = moment();
-    const fromString = today.format('D MMMM, YYYY');
+    const fromString = today.format('D MMMM YYYY');
     const tomorrow = today.add(3, 'days');
-    const toString = tomorrow.format('D MMMM, YYYY');
-    const { from, to } = this.state;
+    const toString = tomorrow.format('D MMMM YYYY');
     const modifiers = { start: from, end: to };
 
     return (
@@ -143,7 +207,22 @@ class Booking extends React.Component {
           <Title>
             <FormattedMessage id="booking" />
           </Title>
-          <form>
+          <form
+            name="contact"
+            method="post"
+            action="/thanks/"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            onSubmit={this.handleSubmit}
+          >
+            {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+            <input type="hidden" name="form-name" value="contact" />
+            <p hidden>
+              <label>
+                Don’t fill this out:{" "}
+                <input name="bot-field" onChange={this.handleChange} />
+              </label>
+            </p>
             <div className="InputFromTo" id="book">
               <div className="InputFromTo-from">
                 <Label><FormattedMessage id="checkIn" /></Label>
@@ -196,20 +275,31 @@ class Booking extends React.Component {
               <FormattedMessage id="email" />
             </Label>
             <Email
+              name="email"
               type="email"
+              onChange={this.handleChange}
             />
+            {inputErrors.email &&
+              <Error>
+                <FormattedMessage id="errorEmail" />
+              </Error>
+            }
             <Label>
               <FormattedMessage id="message" />
             </Label>
             <Message 
               rows="10" 
               name="message" 
+              onChange={this.handleChange}
             />
             <ButtonContainer>
-              <Button>
+              <Button type="submit">
                 <FormattedMessage id="send" />
               </Button>
             </ButtonContainer>
+            {/* {submitted &&
+              <h1>Tack för ditt mail</h1>
+            } */}
             <Helmet>
               <style>{`
                 .InputFromTo {
@@ -221,13 +311,10 @@ class Booking extends React.Component {
                   width: calc(50% - 5px);
                 }
                 .InputFromTo .DayPicker {
-                  margin-bottom: 20px;
                   font-size: 1.8rem !important;
                   font-family: 'CircularStd', sans-serif !important;
                 }
-                .InputFromTo .DayPickerInput {
-                  margin-bottom: 20px;
-                }
+
                 .InputFromTo .InputFromTo-from .DayPickerInput {
                   width: 100%;
                 }

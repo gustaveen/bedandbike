@@ -41,5 +41,9 @@ module.exports = {
   'booking': 'Request to Book',
   'message': 'Message',
   'send': 'Send',
-  'email': 'E-mail'
+  'email': 'Your e-mail',
+  'thanksTitle': 'Thank you for your email!',
+  'thanksNote': 'We will get back to you as soon as we can',
+  'errorEmail': 'Please prove your email',
+  'moreInfo': 'Do you have any other questions? Send us an email to <a href="mailto:bedandbikeockero@gmail.com">bedandbikeockero@gmail.com</a>',
 };

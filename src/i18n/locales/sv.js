@@ -41,5 +41,9 @@ module.exports = {
   'booking': 'Bokningsförfrågan',
   'message': 'Meddelande',
   'send': 'Skicka',
-  'email': 'E-post'
+  'email': 'Din e-post',
+  'errorEmail': 'Var vänlig ange din epost',
+  'thanksTitle': 'Tack för din förfrågan!',
+  'thanksNote': 'Vi återkommer så snart vi kan',
+  'moreInfo': 'Har du övriga frågor? Hör av dig till <a href="mailto:bedandbikeockero@gmail.com">bedandbikeockero@gmail.com</a>',
 };

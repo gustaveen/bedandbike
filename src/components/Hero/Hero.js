@@ -5,16 +5,27 @@ import Img from 'gatsby-image'
 import {
     HeroRoot,
     HeroTitle,
+    HeroByline,
+    HeroContainer,
 } from './Hero.styles';
 
 const Hero = (props) => {
-  const { image } = props;
+  const { 
+    image,
+    byline,
+    title,
+  } = props;
   return(
     <HeroRoot>
       <Img fluid={image} 
         alt="hero"
       />
-      <HeroTitle>Välkommen till Öckero</HeroTitle>
+      <HeroContainer>
+        <HeroTitle>{title}</HeroTitle>
+        {byline &&
+          <HeroByline>{byline}</HeroByline>
+        }
+      </HeroContainer>
     </HeroRoot>
   );
 }
