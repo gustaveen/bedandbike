@@ -1,18 +1,18 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import { withIntl, Link } from '../i18n'
+import React from 'react';
+import { graphql } from 'gatsby';
+import { withIntl, Link } from '../i18n';
 import { ThemeProvider } from 'styled-components';
 import { FormattedMessage } from 'react-intl';
+import theme from '../components/theme';
 // import Img from 'gatsby-image';
 
 import Layout from '../components/layout'
 import Hero from '../components/Hero'
-// import BookingBar from '../components/BookingBar'
-import Booking from '../components/Booking'
-import Intro from '../components/Intro'
-import Rooms from '../components/Rooms'
-import Info from '../components/Info'
-import theme from '../components/theme'
+// import Booking from '../components/Booking'
+import Intro from '../components/Intro';
+import Rooms from '../components/Rooms';
+import Info from '../components/Info';
+import Amenities from '../components/Amenities';
 
 
 const IndexPage = (props) => (
@@ -22,7 +22,6 @@ const IndexPage = (props) => (
         image={props.data.heroImage.childImageSharp.fluid}
         title={<FormattedMessage id="introTitle" />} 
       />
-      {/* <BookingBar /> */}
       <Intro/>
       <Rooms
         images={[
@@ -32,10 +31,7 @@ const IndexPage = (props) => (
           props.data.room4.childImageSharp.fluid
         ]}
       />
-      {/* <Link to="/page-2/">
-        <FormattedMessage id="navRooms" />
-      </Link> */}
-      <Booking />
+      <Amenities />
       <Info />
     </Layout>
   </ThemeProvider>

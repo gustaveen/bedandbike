@@ -26,7 +26,7 @@ const InfoRoot = styled.div`
 const Info = () => {
   return (
     <InfoRoot>
-      <FormattedHTMLMessage id="moreInfo" />
+      <FormattedHTMLMessage id="contactText" />
     </InfoRoot>
   );
 }
