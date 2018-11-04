@@ -14,6 +14,7 @@ export const HeaderContainer = styled.div`
   margin-left: 4%;
   margin-right: 4%;
   padding: 15px 20px;
+  
   @media ${breakpoints.md} {  
     padding-top: 15px;
     padding-bottom: 15px;

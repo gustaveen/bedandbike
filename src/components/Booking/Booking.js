@@ -116,6 +116,7 @@ class Booking extends React.Component {
       from: undefined,
       to: undefined,
       email: '',
+      message: '',
       submitted: false,
       inputErrors: {
         email: '',
@@ -173,6 +174,8 @@ class Booking extends React.Component {
       return;
     }
     const form = e.target;
+    console.log(form);
+    console.log(this.state);
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -188,8 +191,10 @@ class Booking extends React.Component {
   render() {
     const { language } = this.context;
     const { 
+      email,
       from,
       inputErrors,
+      message,
       to, 
     } = this.state;
     
@@ -277,6 +282,7 @@ class Booking extends React.Component {
             <Email
               name="email"
               type="email"
+              value={email}
               onChange={this.handleChange}
             />
             {inputErrors.email &&
@@ -289,7 +295,8 @@ class Booking extends React.Component {
             </Label>
             <Message 
               rows="10" 
-              name="message" 
+              name="message"
+              value={message}
               onChange={this.handleChange}
             />
             <ButtonContainer>
