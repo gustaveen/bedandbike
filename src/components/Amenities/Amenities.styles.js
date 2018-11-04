@@ -60,11 +60,12 @@ export const List = styled.div`
   @media ${breakpoints.ml} {
     width: 50%;
     margin-top: 0;
+    padding-left: 24px;
   }
 `;
 
 export   const Item = styled.li`
-  display: inline-flex;
+  display: block;
   align-items: flex-start;
   margin-bottom: 16px;
   padding-left: 1vw;
@@ -88,7 +89,8 @@ export   const Item = styled.li`
     width: 50%;
   }
 
-  @media ${breakpoints.md} {  
+  @media ${breakpoints.md} {
+    display: inline-flex;
     width: 50%;
     padding-left: 0;
 
