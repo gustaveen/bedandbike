@@ -1,21 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Bed and bike Öckerö',
-    rrom: 'hej',
-    rooms: [
-      {
-        name: 'room1',
-        people: '2-3',
-        bed: '2 x 90 cm',
-        price: '1050 kr',
-      },
-      {
-        name: 'room2',
-        people: '2',
-        bed: '2 x 90 cm',
-        price: '1050 kr',
-      }
-    ],
+    title: 'Bed and Bike Öckerö',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
