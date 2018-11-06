@@ -180,7 +180,7 @@ class Rooms extends React.PureComponent {
       {
         name: 'room4',
         people: '1',
-        bed: '1 x 120 cm',
+        bed: '1 x 105 cm',
         price: '500 kr',
         img: room4Img,
         test: '/rum-1.jpg/',
