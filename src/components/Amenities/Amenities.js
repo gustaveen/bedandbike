@@ -27,11 +27,11 @@ const Amenities = (props) => (
   <AmenitiesRoot>
     <AmenitiesContainer>
       <Content>
-        <Title>Så här bor du hos oss</Title>
+        <Title><FormattedMessage id="amenitiesTitle" /></Title>
         <Text><FormattedMessage id="amenitiesPreamlbe" /></Text>
       </Content>
       <List>
-        <Title>Detta ingår alltid</Title>
+        <Title><FormattedMessage id="facilitiesByline" /></Title>
         <ul>
           <Item img={cup}>
             <FormattedMessage id="breakfast" />
