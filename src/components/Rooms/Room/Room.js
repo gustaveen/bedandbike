@@ -22,11 +22,11 @@ const RoomInfo = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1 0 auto;
-  padding 24px 24px 32px;
+  padding: 24px 24px 32px;
 
   @media ${breakpoints.ml} {  
     width: 40%;
-    padding 54px 38px 38px;
+    padding: 54px 38px 38px;
   }
 `;
 
