@@ -48,4 +48,12 @@ module.exports = {
   'thanksNote': 'Vi återkommer så snart vi kan',
   'moreInfo': 'Har du övriga frågor? Hör av dig till <a href="mailto:bedandbikeockero@gmail.com">bedandbikeockero@gmail.com</a>',
   'alwaysIncluded': 'Ingår alltid',
+  'bikePackage': 'Cykelpaket',
+  'bikeIntro': 'Öckeröarna breder ut sig som ett pärlband mot Västerhavet mellan Vinga och Marstrand, i Göteborgs norra skärgård. Var och en av de tio öarna har sin egen karaktär och som du med fördel upplever från cykelsadeln. För att hitta guldkornen har vi satt samman en eller flera dagars cykelpaket. Förutom cykling får du uppleva vandring, god mat, fina båtturer och öarnas spännande historia.',
+  'bikeCardTitle1': '1-dags cykelpaket',
+  'bikeCardText1': 'Hyr cykel hos oss på plats. Vi har cyklar för alla åldrar och nivåer. Vi kan alla vägar. Fråga oss så får du en karta med bästa vägarna och utkiksplatserna.',
+  'bikeCardTitle2': '2-dagars cykelpaket',
+  'bikeCardText2': 'Hyr cykel hos oss på plats. Vi har cyklar för alla åldrar och nivåer. Vi kan alla vägar. Fråga oss så får du en karta med bästa vägarna och utkiksplatserna.',
+  'bikeCardTitle3': '3-dagars cykelpaket',
+  'bikeCardText3': 'Hyr cykel hos oss på plats. Vi har cyklar för alla åldrar och nivåer. Vi kan alla vägar. Fråga oss så får du en karta med bästa vägarna och utkiksplatserna.',
 };

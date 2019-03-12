@@ -13,15 +13,18 @@ const Hero = (props) => {
   const { 
     image,
     byline,
+    left,
     title,
   } = props;
   return(
     <HeroRoot>
-      <Img fluid={image} 
-        alt="hero"
-      />
-      <HeroContainer>
-        <HeroTitle>{title}</HeroTitle>
+      {image &&
+        <Img fluid={image} 
+          alt="hero"
+        />
+      }
+      <HeroContainer left={left}>
+        <HeroTitle left={left}>{title}</HeroTitle>
         {byline &&
           <HeroByline>{byline}</HeroByline>
         }

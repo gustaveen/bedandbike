@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { withIntl, Link } from '../i18n';
 import { ThemeProvider } from 'styled-components';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, FormattedHTMLMessage } from 'react-intl';
 import theme from '../components/theme';
 // import Img from 'gatsby-image';
 
@@ -15,40 +15,43 @@ import Info from '../components/Info';
 import Amenities from '../components/Amenities';
 
 
-const IndexPage = (props) => (
-  <ThemeProvider theme={theme}>
-    <Layout langKey={props.pageContext.locale}>
-      <Hero
-        image={props.data.heroImage.childImageSharp.fluid}
-        title={<FormattedMessage id="introTitle" />} 
-      />
-      <Intro/>
-      <Rooms
-        images={[
-          props.data.room1.childImageSharp.fluid,
-          props.data.room2.childImageSharp.fluid,
-          props.data.room3.childImageSharp.fluid,
-          props.data.room4.childImageSharp.fluid
-        ]}
-      />
-      <Amenities />
-      <Info />
-    </Layout>
-  </ThemeProvider>
-)
+const IndexPage = (props) => {
+  console.log(props);
+  return (
+    <ThemeProvider theme={theme}>
+      <Layout langKey={props.pageContext.locale}>
+        <Hero
+          image={props.data.heroImage.childImageSharp.fluid}
+          title={<FormattedMessage id="introTitle" />}
+        />
+        <Intro text={<FormattedHTMLMessage id="introText" />} />
+        <Rooms
+          images={[
+            props.data.room1.childImageSharp.fluid,
+            props.data.room2.childImageSharp.fluid,
+            props.data.room3.childImageSharp.fluid,
+            props.data.room4.childImageSharp.fluid
+          ]}
+        />
+        <Amenities />
+        <Info />
+      </Layout>
+    </ThemeProvider>
+  )
+}
 
 export default withIntl(IndexPage)
 
 export const pageQuery = graphql`
   query {
-    heroImage: file(relativePath: { regex: "/boats.jpg/" }) {
+    heroImage: file(relativePath: { regex: "/boats/" }) {
       childImageSharp {
         fluid(maxWidth: 1900) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    room1: file(relativePath: { regex: "/rum-1.jpg/" }) {
+    room1: file(relativePath: { regex: "/rum-1/" }) {
       childImageSharp {
         fluid(maxWidth: 740) {
           ...GatsbyImageSharpFluid

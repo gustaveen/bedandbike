@@ -54,13 +54,15 @@ const IntroText = styled.h2`
   }
 `;
 
-const Intro = () => {
+const Intro = ({
+  text
+}) => {
   return (
     <IntroRoot>
       <IntroContainer>
         <IntroIcon src={bike} alt="logo" />
         <IntroText>
-            <FormattedHTMLMessage id="introText" />
+            {text}
         </IntroText>
       </IntroContainer>
     </IntroRoot>
