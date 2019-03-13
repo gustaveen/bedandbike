@@ -86,5 +86,12 @@ export const pageQuery = graphql`
         }
       }
     }
+    day1: file(relativePath: { regex: "/boat-and-bike.jpg/" }) {
+      childImageSharp {
+        fluid(maxWidth: 1900) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
   }
 `
