@@ -1,11 +1,11 @@
-import React from "react";
-import { graphql } from "gatsby";
-import { withIntl } from "../i18n";
-import { ThemeProvider } from "styled-components";
-import { FormattedMessage } from "react-intl";
-import theme from "../components/theme";
-import Layout from "../components/layout";
-import Hero from "../components/Hero";
+import React from 'react';
+import { graphql } from 'gatsby';
+import { withIntl } from '../i18n';
+import { ThemeProvider } from 'styled-components';
+import { FormattedMessage } from 'react-intl';
+import theme from '../components/theme';
+import Layout from '../components/layout';
+import Hero from '../components/Hero';
 
 import {
   Article,
@@ -18,7 +18,7 @@ import {
   Price,
   PriceText,
   PriceAmount,
-} from "./cykelpaket.styles";
+} from '../components/cykelpaket.styles';
 
 const BikeTwoDay = props => (
   <ThemeProvider theme={theme}>

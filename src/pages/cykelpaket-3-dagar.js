@@ -1,12 +1,12 @@
-import React from "react";
-import { graphql } from "gatsby";
-import { withIntl } from "../i18n";
-import { ThemeProvider } from "styled-components";
-import { FormattedMessage } from "react-intl";
-import theme from "../components/theme";
-import Layout from "../components/layout";
-import Hero from "../components/Hero";
-import Button from "../components/Button";
+import React from 'react';
+import { graphql } from 'gatsby';
+import { withIntl } from '../i18n';
+import { ThemeProvider } from 'styled-components';
+import { FormattedMessage } from 'react-intl';
+import theme from '../components/theme';
+import Layout from '../components/layout';
+import Hero from '../components/Hero';
+import Button from '../components/Button';
 
 import {
   Article,
@@ -20,7 +20,7 @@ import {
   PriceText,
   PriceAmount,
   Booking,
-} from "./cykelpaket.styles";
+} from '../components/cykelpaket.styles';
 
 const BikeThreeDay = props => (
   <ThemeProvider theme={theme}>
@@ -136,15 +136,15 @@ const BikeThreeDay = props => (
             shopping och ett besök på öns fiskemuseum som visar livet på
             Öckerö-öarna över tid.
           </p>
-          <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
+          <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
             <iframe
               src="https://player.vimeo.com/video/312052598?autoplay=0&title=0&byline=0&portrait=0"
               style={{
-                position: "absolute",
-                top: "0",
-                left: "0",
-                width: "100%",
-                height: "100%",
+                position: 'absolute',
+                top: '0',
+                left: '0',
+                width: '100%',
+                height: '100%',
               }}
               frameborder="0"
               webkitallowfullscreen

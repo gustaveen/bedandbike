@@ -1,11 +1,11 @@
-import React from "react";
-import { graphql } from "gatsby";
-import { withIntl } from "../i18n";
-import { ThemeProvider } from "styled-components";
-import { FormattedMessage } from "react-intl";
-import theme from "../components/theme";
-import Layout from "../components/layout";
-import Hero from "../components/Hero";
+import React from 'react';
+import { graphql } from 'gatsby';
+import { withIntl } from '../i18n';
+import { ThemeProvider } from 'styled-components';
+import { FormattedMessage } from 'react-intl';
+import theme from '../components/theme';
+import Layout from '../components/layout';
+import Hero from '../components/Hero';
 
 import {
   Article,
@@ -18,7 +18,7 @@ import {
   Price,
   PriceText,
   PriceAmount,
-} from "./cykelpaket.styles";
+} from '../components/cykelpaket.styles';
 
 const BikeOneDay = props => (
   <ThemeProvider theme={theme}>
@@ -73,15 +73,15 @@ const BikeOneDay = props => (
             ms/Belle–Amie som tar er, via kobbar och skär, ut på en mycket
             uppskattad och spännande guidad tur till Vinga.Turen tar 2.5 timmar.
           </p>
-          <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
+          <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
             <iframe
               src="https://player.vimeo.com/video/312052598?autoplay=0&title=0&byline=0&portrait=0"
               style={{
-                position: "absolute",
-                top: "0",
-                left: "0",
-                width: "100%",
-                height: "100%",
+                position: 'absolute',
+                top: '0',
+                left: '0',
+                width: '100%',
+                height: '100%',
               }}
               frameborder="0"
               webkitallowfullscreen
@@ -94,7 +94,7 @@ const BikeOneDay = props => (
           <p>Cyklingen är ca 25 km</p>
           <p>
             Då gallerierna och hembygdsmuseum inte har öppet alla dagar.
-            Vänligen besök deras resp.hemsidor.{" "}
+            Vänligen besök deras resp.hemsidor.{' '}
           </p>
           <p>
             Cykelpaketet är ett förslag. Ni kan tillsammans med värdparet forma
