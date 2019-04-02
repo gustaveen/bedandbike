@@ -1,117 +1,26 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import { withIntl, Link } from '../i18n';
-import styled, { ThemeProvider } from 'styled-components';
-import { FormattedMessage } from 'react-intl';
-import theme from '../components/theme';
-import { breakpoints } from '../components/breakpoints';
+import React from "react";
+import { graphql } from "gatsby";
+import { withIntl } from "../i18n";
+import { ThemeProvider } from "styled-components";
+import { FormattedMessage } from "react-intl";
+import theme from "../components/theme";
+import Layout from "../components/layout";
+import Hero from "../components/Hero";
 
-import Layout from '../components/layout'
-import Hero from '../components/Hero'
-import GridList from '../components/GridList'
-import Intro from '../components/Intro';
+import {
+  Article,
+  Sidebar,
+  SidebarTitle,
+  List,
+  Item,
+  Content,
+  ContentTitle,
+  Price,
+  PriceText,
+  PriceAmount,
+} from "./cykelpaket.styles";
 
-const Article = styled.div`
-  max-width: 1160px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 40px 4%;
-
-  @media ${breakpoints.lg} {
-    display: flex;
-    margin-top: 32px;
-  }
-`;
-
-const Sidebar = styled.div`
-  flex: 1 0 auto;
-  padding-top: 12px;
-  border-top: 1px solid #eaeaea;
-
-  @media ${breakpoints.lg} {
-    width: 250px;
-    margin-top: 1rem;
-    margin-right: 4rem;
-  }
-`;
-
-const SidebarTitle = styled.h4`
-  padding-top: 20px;
-  margin-bottom: 12px;
-  font-size: 1.8rem;
-  font-weight: 700;
-`;
-
-const List = styled.ul`
-  list-style: none;
-`;
-
-const Item = styled.li`
-  position: relative;
-  margin-bottom: 12px;
-  padding-left: 1em;
-  font-size: 1.6rem;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 7px;
-    width: 0.7rem;
-    height: 0.7rem;
-    margin-left: -1em;
-    margin-right: 1rem;
-    border-radius: 100%;
-    background-color: ${props => props.theme.palette.blue.main};
-  }
-`;
-
-const Content = styled.div`
-  h3 {
-    margin-bottom: 16px;
-    font-size: 2rem;
-    font-weight: 700;
-  }
-
-  p {
-    margin-bottom: 1.6rem;
-    font-size: 1.8rem;
-    line-height: 1.666667;
-
-    @media ${breakpoints.lg} {
-      margin-bottom: 2rem;
-    }
-  }
-
-  span {
-    display: block;
-    margin-top: 0.8rem;
-    margin-bottom: 2rem;
-    font-size: 1.6rem;
-    line-height: 2;
-    text-align: center;
-    color: #8b8b8b;
-  }
-`;
-
-const ContentTitle = styled.h2`
-  margin-bottom: 40px;
-  font-size: 1.6rem;
-  line-height: 1.4;
-
-  @media ${breakpoints.md} {  
-    font-size: 2rem;
-  }
-
-  @media ${breakpoints.ml} {  
-    font-size: 2.2rem;
-  }
-
-  @media ${breakpoints.lg} {  
-    font-size: 2.6rem;
-  }
-`;
-
-const BikeOneDay = (props) => (
+const BikeOneDay = props => (
   <ThemeProvider theme={theme}>
     <Layout langKey={props.pageContext.locale}>
       <Hero
@@ -121,6 +30,10 @@ const BikeOneDay = (props) => (
       />
       <Article>
         <Sidebar>
+          <Price>
+            <PriceText>Pris</PriceText>
+            <PriceAmount>700 kr/person</PriceAmount>
+          </Price>
           <SidebarTitle>Ingår i priset</SidebarTitle>
           <List>
             <Item>Guidad båttur till Vinga (2.5h)</Item>
@@ -131,28 +44,76 @@ const BikeOneDay = (props) => (
           <List>
             <Item>Hyrcykel 100kr/dygn</Item>
             <Item>Parkering 100kr</Item>
-            <Item>Paketet kompletteras enkelt med en eller flera övernattningar (dubbelrum 950kr inkl. frukost)</Item>
+            <Item>
+              Paketet kompletteras enkelt med en eller flera övernattningar
+              (dubbelrum 1050kr inkl. frukost)
+            </Item>
             <Item>Barn i extrasäng 200 sek/dygn</Item>
           </List>
         </Sidebar>
         <Content>
-          <ContentTitle>Välkommen till en dags ”ö-luffning" på några av Öckerös 10 öar. Du tar dig fram med cykel, båt och till fots.</ContentTitle>
+          <ContentTitle>
+            Välkommen till en dags ”ö-luffning" på några av Öckerös 10 öar. Du
+            tar dig fram med cykel, båt och till fots.
+          </ContentTitle>
           <h3>Cykla till Hönö och Fotö</h3>
-          <p>Efter ankomsten, då ni avsmakat en god kopp latté, hoppar ni upp på era cyklar alt. våra hyrcyklar och cyklar via Öckerö hembygdsmuseum, Hönö konsthall och Galleri Gårda vidare söderut och över bron till den sydligast belägna ön, Fotö. Där kan ni vandra omkring i den bevarade skärgårdsbebyggelsen.</p>
-          <p>Styr därefter färden mot Hönö Klåvas centrum med dess många små och spännande butiker, restauranger och caféer. Här finns också öns fiskemuseum som visar livet på Öckerö-öarna över tid. Lunchen avnjuter ni på Tullhuset, en genuin fiskerestaurang med vidunderlig utsikt och fantastisk mat. Klockan 16.00 stiger ni ombord på MS/Belle–Amie som tar er, via kobbar och skär, ut på en mycket uppskattad och spännande guidad tur till Vinga.Turen tar 2.5 timmar.</p>
-          <div style={{padding:'56.25% 0 0 0',position:'relative'}}><iframe src="https://player.vimeo.com/video/312052598?autoplay=1&title=0&byline=0&portrait=0" style={{position:'absolute',top:'0',left:'0',width:'100%',height:'100%'}} frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+          <p>
+            Efter ankomsten, då ni avsmakat en god kopp latté, hoppar ni upp på
+            era cyklar alt. våra hyrcyklar och cyklar via Öckerö hembygdsmuseum,
+            Hönö konsthall och Galleri Gårda vidare söderut och över bron till
+            den sydligast belägna ön, Fotö. Där kan ni vandra omkring i den
+            bevarade skärgårdsbebyggelsen.
+          </p>
+          <p>
+            Styr därefter färden mot Hönö Klåvas centrum med dess många små och
+            spännande butiker, restauranger och caféer. Här finns också öns
+            fiskemuseum som visar livet på Öckerö-öarna över tid. Lunchen
+            avnjuter ni på Tullhuset, en genuin fiskerestaurang med vidunderlig
+            utsikt och fantastisk mat. Klockan 16.30 stiger ni ombord på
+            ms/Belle–Amie som tar er, via kobbar och skär, ut på en mycket
+            uppskattad och spännande guidad tur till Vinga.Turen tar 2.5 timmar.
+          </p>
+          <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
+            <iframe
+              src="https://player.vimeo.com/video/312052598?autoplay=0&title=0&byline=0&portrait=0"
+              style={{
+                position: "absolute",
+                top: "0",
+                left: "0",
+                width: "100%",
+                height: "100%",
+              }}
+              frameborder="0"
+              webkitallowfullscreen
+              mozallowfullscreen
+              allowfullscreen
+            />
+          </div>
+          <script src="https://player.vimeo.com/api/player.js" />
           <span>MS/Belle–Amie en vacker sommardag</span>
           <p>Cyklingen är ca 25 km</p>
-          <p>Då gallerierna och hembygdsmuseum inte har öppet alla dagar. Vänligen besök deras resp.hemsidor. </p>
-          <p>Cykelpaketet är ett förslag. Ni kan tillsammans med värdparet forma ert eget paket.  Hyppeln, Källö-Knippla, Kalvsund och Grötö är andra unika öar som man når med färja + cykel/vandring eller kajak. Dessa öar har också vandringsleder och underbar natur.</p>
+          <p>
+            Då gallerierna och hembygdsmuseum inte har öppet alla dagar.
+            Vänligen besök deras resp.hemsidor.{" "}
+          </p>
+          <p>
+            Cykelpaketet är ett förslag. Ni kan tillsammans med värdparet forma
+            ert eget paket.  Hyppeln, Källö-Knippla, Kalvsund och Grötö är andra
+            unika öar som man når med färja + cykel/vandring eller kajak. Dessa
+            öar har också vandringsleder och underbar natur.
+          </p>
+          <p>
+            Fantastiska matställen finns även på Hyppeln, Källö-Knippla och
+            Björkö.
+          </p>
         </Content>
       </Article>
       {/* <Intro text={<FormattedMessage id="bike1Intro" />}/> */}
     </Layout>
   </ThemeProvider>
-)
+);
 
-export default withIntl(BikeOneDay)
+export default withIntl(BikeOneDay);
 
 export const query = graphql`
   query {
@@ -164,5 +125,4 @@ export const query = graphql`
       }
     }
   }
-`
-
+`;

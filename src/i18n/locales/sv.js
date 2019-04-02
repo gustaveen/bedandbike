@@ -51,10 +51,10 @@ module.exports = {
   'bikePackage': 'Cykelpaket',
   'bikeIntro': 'Öckeröarna breder ut sig som ett pärlband mot Västerhavet mellan Vinga och Marstrand, i Göteborgs norra skärgård. Var och en av de tio öarna har sin egen karaktär och som du med fördel upplever från cykelsadeln. För att hitta guldkornen har vi satt samman en eller flera dagars cykelpaket. Förutom cykling får du uppleva vandring, god mat, fina båtturer och öarnas spännande historia.',
   'bikeCardTitle1': 'Cykelpaket - 1 dag',
-  'bikeCardText1': 'Hyr cykel hos oss på plats. Vi har cyklar för alla åldrar och nivåer. Vi kan alla vägar. Fråga oss så får du en karta med de bästa vägarna och utkiksplatserna.',
+  'bikeCardText1': 'Denna dag får du via cykel och båt uppleva några av våra vackra öar. På fiskemuseet kan du få reda på hur vi levt och lever våra liv här ute. Du äter en fantastisk sommarlunch på vår fiskrestaurang i Klåva. Under den guidade båtturen ut till Vinga får du lyssna till skepparens spännande historier.',
   'bikeCardTitle2': 'Cykelpaket - 2 dagar',
-  'bikeCardText2': 'Hyr cykel hos oss på plats. Vi har cyklar för alla åldrar och nivåer. Vi kan alla vägar. Fråga oss så får du en karta med de bästa vägarna och utkiksplatserna.',
+  'bikeCardText2': 'Cyklingen i detta paket går första dagen till Rörö och dess naturreservat med betande hästar och får. Det består av ett stort klapperstensfält och ljunghedar. Övernattning sker på det gamla skärgårdshuset Bed and Bike Öckerö. Nästa dag går via Öckerö hamn till Björkö med båt. På slingrande vägar och stigar tar du dig norr ut på ön till Bovik, som varit äldsta fiskhamn och numera används som seglarläger för ungdom.',
   'bikeCardTitle3': 'Cykelpaket - 3 dagar',
-  'bikeCardText3': 'Hyr cykel hos oss på plats. Vi har cyklar för alla åldrar och nivåer. Vi kan alla vägar. Fråga oss så får du en karta med de bästa vägarna och utkiksplatserna.',
+  'bikeCardText3': 'Varför inte uppleva fler av våra fantastiska öar och stanna ytterligare några dagar och få möjlighet att uppleva våra öars skiftande karaktärer. Du bor bekvämt i vårt vackra skärgårdshus. Efter den hemlagade frukosten går värden genom dagens rutt.',
   'bike1Intro': 'Välkommen till en dags ”ö-luffning" på några av Öckerös 10 öar. Du tar dig fram med cykel, båt och till fots.',
 };
