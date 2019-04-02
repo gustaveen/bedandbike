@@ -15,7 +15,6 @@ export const Article = styled.div`
 
 export const Sidebar = styled.div`
   flex: 1 0 auto;
-  
 
   @media ${breakpoints.lg} {
     width: 250px;
@@ -100,7 +99,7 @@ export const ContentTitle = styled.h2`
   }
 `;
 
-export const Price  = styled.div`
+export const Price = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -118,4 +117,14 @@ export const PriceAmount = styled.p`
   font-size: 1.8rem;
   font-weight: bold;
   line-height: 1.2;
+`;
+
+export const Booking = styled.div`
+  margin-top: 24px;
+
+  p {
+    text-align: left;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
 `;

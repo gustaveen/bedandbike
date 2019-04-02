@@ -6,6 +6,7 @@ import { FormattedMessage } from "react-intl";
 import theme from "../components/theme";
 import Layout from "../components/layout";
 import Hero from "../components/Hero";
+import Button from "../components/Button";
 
 import {
   Article,
@@ -18,6 +19,7 @@ import {
   Price,
   PriceText,
   PriceAmount,
+  Booking,
 } from "./cykelpaket.styles";
 
 const BikeThreeDay = props => (
@@ -54,6 +56,12 @@ const BikeThreeDay = props => (
             </Item>
             <Item>Barn i extrasäng 200 sek/dygn</Item>
           </List>
+          <Booking>
+            <p>Du bokar detta cykelpaket via swedenbybike.com</p>
+            <Button to="https://swedenbybike.com/cykelpaket/o-loffa-med-cykel-pa-ockeroarna/">
+              Boka här
+            </Button>
+          </Booking>
         </Sidebar>
         <Content>
           <ContentTitle>

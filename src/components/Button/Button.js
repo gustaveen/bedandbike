@@ -1,8 +1,12 @@
-import React from 'react'
-import styled from 'styled-components';
-import { breakpoints } from '../breakpoints';
+import React from "react";
+import styled from "styled-components";
+import { breakpoints } from "../breakpoints";
 
-const StyledButton = styled.button`
+const StyledButton = styled.a`
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
   padding: 12px 25px;
   font-size: 1.2rem;
   font-weight: bold;
@@ -15,17 +19,17 @@ const StyledButton = styled.button`
   cursor: pointer;
 
   &:hover {
-      background-color: ${props => props.theme.palette.blue.dark};
+    background-color: ${props => props.theme.palette.blue.dark};
   }
 
   @media ${breakpoints.md} {
-    padding: 19px 35px;
+    padding: 16px 30px;
     font-size: 1.4rem;
   }
 `;
 
-const Button = (props) => (
-  <StyledButton {...props} />
-)
+const Button = props => (
+  <StyledButton href={props.to} target="_blank" rel="noopener" {...props} />
+);
 
 export default Button;
