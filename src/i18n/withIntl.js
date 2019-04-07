@@ -1,20 +1,20 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { IntlProvider, addLocaleData } from 'react-intl'
-import { localeData } from './locales'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { IntlProvider, addLocaleData } from 'react-intl';
+import { localeData } from './locales';
 
-addLocaleData(localeData)
+addLocaleData(localeData);
 
 export default ComposedComponent => {
   class withIntl extends Component {
     static childContextTypes = {
       language: PropTypes.object,
-    }
+    };
 
     constructor(props) {
-      super()
-      const { pageContext } = props
-      const { locale, languages, originalPath } = pageContext
+      super();
+      const { pageContext } = props;
+      const { locale, languages, originalPath } = pageContext;
 
       this.state = {
         language: {
@@ -22,27 +22,27 @@ export default ComposedComponent => {
           languages,
           originalPath,
         },
-      }
+      };
     }
 
     getChildContext() {
-      const { language } = this.state
+      const { language } = this.state;
       return {
         language,
-      }
+      };
     }
 
     render() {
-      const { language } = this.state
-      const locale = language.locale || 'sv'
-      const messages = require(`./locales/${locale}.js`) // eslint-disable-line
+      const { language } = this.state;
+      const locale = language.locale || 'sv';
+      const messages = require(`./locales/${locale}.js`); // eslint-disable-line
 
       return (
         <IntlProvider locale={locale} messages={messages}>
           <ComposedComponent {...this.props} />
         </IntlProvider>
-      )
+      );
     }
   }
-  return withIntl
-}
+  return withIntl;
+};
