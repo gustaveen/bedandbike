@@ -10,17 +10,18 @@ export const HeaderRoot = styled.div`
 export const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  max-width: 1400px;
   width: 100%;
-  margin-left: 4%;
-  margin-right: 4%;
+  margin-left: auto;
+  margin-right: auto;
   padding: 15px 20px;
-  
-  @media ${breakpoints.md} {  
+
+  @media ${breakpoints.md} {
     padding-top: 15px;
     padding-bottom: 15px;
   }
 
-  @media ${breakpoints.lg} {  
+  @media ${breakpoints.lg} {
     display: flex;
     align-items: center;
   }
