@@ -1,6 +1,6 @@
-import styled, { ThemeProvider } from "styled-components";
-import { breakpoints } from "../breakpoints";
-import Link from "gatsby-link";
+import styled, { ThemeProvider } from 'styled-components';
+import { breakpoints } from '../breakpoints';
+import { Link } from 'gatsby';
 
 export const List = styled.ul`
   display: none;
@@ -44,7 +44,7 @@ export const ItemLink = styled(Link)`
   text-decoration: none;
 
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     width: 100%;
     height: 2px;
