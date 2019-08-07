@@ -17,11 +17,10 @@ const MapRoot = styled.div`
 const MapContainer = styled.div`
   display: flex;
   position: relative;
-  max-width: 1220px;
-  margin-left: 4%;
-  margin-right: 4%;
-  padding-top: 10%;
-  padding-bottom: 10%;
+  max-width: calc(1220px + 8%);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10% 4%;
 `;
 
 const MapInfo = styled.div`
