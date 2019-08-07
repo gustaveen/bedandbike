@@ -1,12 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { navigateTo } from "gatsby-link";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { navigateTo } from 'gatsby-link';
 import moment from 'moment';
 import Helmet from 'react-helmet';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
-import MomentLocaleUtils, { 
-  formatDate, 
-  parseDate, 
+import MomentLocaleUtils, {
+  formatDate,
+  parseDate,
 } from 'react-day-picker/moment';
 import 'react-day-picker/lib/style.css';
 
@@ -22,7 +22,7 @@ import Button from '../Button';
 const BookingRoot = styled.div`
   padding-left: 4%;
   padding-right: 4%;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
 `;
 
 const BookingContainer = styled.div`
@@ -33,12 +33,12 @@ const BookingContainer = styled.div`
   padding-bottom: 32px;
   text-align: center;
 
-  @media ${breakpoints.ml} {  
+  @media ${breakpoints.ml} {
     padding-top: 56px;
     padding-bottom: 56px;
   }
 
-  @media ${breakpoints.xl} {  
+  @media ${breakpoints.xl} {
     padding-top: 60px;
     padding-bottom: 60px;
   }
@@ -49,7 +49,7 @@ const Title = styled.h3`
   font-weight: bold;
   text-align: left;
 
-  @media ${breakpoints.ml} {  
+  @media ${breakpoints.ml} {
     font-size: 2.4rem;
   }
 `;
@@ -65,12 +65,12 @@ const Label = styled.p`
 const Email = styled.input`
   height: 50px;
   width: 100%;
-  padding: .5em 1em;
-  border: 1px solid #F1F1F1;
+  padding: 0.5em 1em;
+  border: 1px solid #f1f1f1;
   border-radius: 4px;
   font-size: 1.6rem;
 
-  @media ${breakpoints.ml} {  
+  @media ${breakpoints.ml} {
     height: 65px;
   }
 `;
@@ -78,13 +78,13 @@ const Email = styled.input`
 const Message = styled.textarea`
   width: 100%;
   margin-bottom: 28px;
-  padding: .5em 1em;
-  border: 1px solid #F1F1F1;
+  padding: 0.5em 1em;
+  border: 1px solid #f1f1f1;
   border-radius: 4px;
   font-size: 1.6rem;
   resize: none;
 
-  @media ${breakpoints.ml} {  
+  @media ${breakpoints.ml} {
     font-size: 1.8rem;
   }
 `;
@@ -99,11 +99,11 @@ const Error = styled.div`
   text-align: left;
 `;
 
-const encode = (data) => {
+const encode = data => {
   return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-}
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+};
 
 class Booking extends React.Component {
   constructor(props) {
@@ -120,28 +120,24 @@ class Booking extends React.Component {
       submitted: false,
       inputErrors: {
         email: '',
-      }
+      },
     };
-  }
+  };
 
   static contextTypes = {
     language: PropTypes.object,
-  }
+  };
 
-  validateInput = (email) => {
-    const {
-      inputErrors,
-    } = this.state;
+  validateInput = email => {
+    const { inputErrors } = this.state;
     console.log(email);
-    inputErrors.email = (email === '');
+    inputErrors.email = email === '';
     console.log(inputErrors);
     this.setState({
       inputErrors,
     });
-    return (
-      email !== ''
-    );
-  }
+    return email !== '';
+  };
 
   showFromMonth = () => {
     const { from, to } = this.state;
@@ -151,23 +147,21 @@ class Booking extends React.Component {
     if (moment(to).diff(moment(from), 'months') < 2) {
       this.to.getDayPicker().showMonth(from);
     }
-  }
-  handleFromChange = (from) => {
+  };
+  handleFromChange = from => {
     // Change the from date and focus the "to" input field
     this.setState({ from });
-  }
-  handleToChange = (to) => {
+  };
+  handleToChange = to => {
     this.setState({ to }, this.showFromMonth);
-  }
+  };
 
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
 
   handleSubmit = e => {
-    const {
-      email,
-    } = this.state;
+    const { email } = this.state;
     e.preventDefault();
 
     if (!this.validateInput(email)) {
@@ -176,28 +170,22 @@ class Booking extends React.Component {
     const form = e.target;
     console.log(form);
     console.log(this.state);
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
-        "form-name": form.getAttribute("name"),
-        ...this.state
-      })
+        'form-name': form.getAttribute('name'),
+        ...this.state,
+      }),
     })
-      .then(() => navigateTo(form.getAttribute("action")))
+      .then(() => navigateTo(form.getAttribute('action')))
       .catch(error => alert(error));
   };
 
   render() {
     const { language } = this.context;
-    const { 
-      email,
-      from,
-      inputErrors,
-      message,
-      to, 
-    } = this.state;
-    
+    const { email, from, inputErrors, message, to } = this.state;
+
     const { locale } = language;
     moment.locale(locale);
     const today = moment();
@@ -224,13 +212,15 @@ class Booking extends React.Component {
             <input type="hidden" name="form-name" value="contact" />
             <p hidden>
               <label>
-                Don’t fill this out:{" "}
+                Don’t fill this out:{' '}
                 <input name="bot-field" onChange={this.handleChange} />
               </label>
             </p>
             <div className="InputFromTo" id="book">
               <div className="InputFromTo-from">
-                <Label><FormattedMessage id="checkIn" /></Label>
+                <Label>
+                  <FormattedMessage id="checkIn" />
+                </Label>
                 <DayPickerInput
                   value={from}
                   placeholder={fromString}
@@ -242,17 +232,19 @@ class Booking extends React.Component {
                     disabledDays: { after: to },
                     firstDayOfWeek: 1,
                     localeUtils: MomentLocaleUtils,
-                    locale:locale,
+                    locale: locale,
                     toMonth: to,
                     modifiers,
-                    numberOfMonths: 2,  
+                    numberOfMonths: 2,
                     onDayClick: () => this.to.getInput().focus(),
                   }}
                   onDayChange={this.handleFromChange}
                 />
               </div>
               <div className="InputFromTo-to">
-                <Label><FormattedMessage id="checkOut" /></Label>
+                <Label>
+                  <FormattedMessage id="checkOut" />
+                </Label>
                 <DayPickerInput
                   ref={el => (this.to = el)}
                   value={to}
@@ -285,16 +277,16 @@ class Booking extends React.Component {
               value={email}
               onChange={this.handleChange}
             />
-            {inputErrors.email &&
+            {inputErrors.email && (
               <Error>
                 <FormattedMessage id="errorEmail" />
               </Error>
-            }
+            )}
             <Label>
               <FormattedMessage id="message" />
             </Label>
-            <Message 
-              rows="10" 
+            <Message
+              rows="10"
               name="message"
               value={message}
               onChange={this.handleChange}
@@ -370,7 +362,7 @@ class Booking extends React.Component {
           </form>
         </BookingContainer>
       </BookingRoot>
-    )
+    );
   }
 }
 

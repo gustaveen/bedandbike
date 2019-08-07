@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
 import { breakpoints } from '../breakpoints';
@@ -19,19 +19,23 @@ import {
   Item,
   Text,
   Title,
-  } from './Amenities.styles';
+} from './Amenities.styles';
 
-
-const Amenities = (props) => (
-  
+const Amenities = props => (
   <AmenitiesRoot>
     <AmenitiesContainer>
       <Content>
-        <Title><FormattedMessage id="amenitiesTitle" /></Title>
-        <Text><FormattedMessage id="amenitiesPreamlbe" /></Text>
+        <Title>
+          <FormattedMessage id="amenitiesTitle" />
+        </Title>
+        <Text>
+          <FormattedMessage id="amenitiesPreamlbe" />
+        </Text>
       </Content>
       <List>
-        <Title><FormattedMessage id="facilitiesByline" /></Title>
+        <Title>
+          <FormattedMessage id="facilitiesByline" />
+        </Title>
         <ul>
           <Item img={cup}>
             <FormattedMessage id="breakfast" />
@@ -57,7 +61,7 @@ const Amenities = (props) => (
         </ul>
       </List>
     </AmenitiesContainer>
-  </AmenitiesRoot>   
-)
+  </AmenitiesRoot>
+);
 
 export default Amenities;

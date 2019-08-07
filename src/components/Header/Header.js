@@ -1,9 +1,9 @@
-import React from "react";
-import Language from "../Language";
-import NavMain from "../NavMain";
+import React from 'react';
+import Language from '../Language';
+import NavMain from '../NavMain';
 
-import logo from "../../assets/svg/logo.svg";
-import { HeaderRoot, HeaderContainer } from "./Header.styles";
+import logo from '../../assets/svg/logo.svg';
+import { HeaderRoot, HeaderContainer } from './Header.styles';
 
 const Header = props => (
   <HeaderRoot>

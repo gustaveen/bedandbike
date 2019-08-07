@@ -1,7 +1,7 @@
 /* global location */
-import React from "react";
-import { FormattedMessage } from "react-intl";
-import { List, Item, ItemLink } from "./NavMain.styles";
+import React from 'react';
+import { FormattedMessage } from 'react-intl';
+import { List, Item, ItemLink } from './NavMain.styles';
 
 const NavMain = props => (
   <List>

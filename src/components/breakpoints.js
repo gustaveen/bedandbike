@@ -5,8 +5,8 @@ const size = {
   ml: '768px',
   lg: '1024px',
   xl: '1440px',
-  xxl: '2560px'
-}
+  xxl: '2560px',
+};
 
 export const breakpoints = {
   xs: `(min-width: ${size.xs})`,

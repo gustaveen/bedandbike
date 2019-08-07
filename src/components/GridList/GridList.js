@@ -8,7 +8,7 @@ const StyledCardList = styled.div`
     margin-bottom: 20px;
   }
 
-  @media ${breakpoints.md} {  
+  @media ${breakpoints.md} {
     display: flex;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -22,13 +22,11 @@ const StyledCardList = styled.div`
     }
   }
 
-  @media ${breakpoints.lg} {  
+  @media ${breakpoints.lg} {
     grid-template-columns: ${props => `repeat(${props.columns}, 1fr)`};
   }
 `;
 
-const GridList = props => (
-  <StyledCardList {...props} />
-);
+const GridList = props => <StyledCardList {...props} />;
 
 export default GridList;
