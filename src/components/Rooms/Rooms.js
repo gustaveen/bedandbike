@@ -1,19 +1,19 @@
-import React from 'react'
-import { graphql } from 'gatsby'
+import React from 'react';
+import { graphql } from 'gatsby';
 import { FormattedMessage } from 'react-intl';
 
 import styled from 'styled-components';
 import { breakpoints } from '../breakpoints';
 
 // import Button from '../Button'
-import Room from './Room'
+import Room from './Room';
 
-import room1Img from '../../assets/images/rum-1.jpg'
-import room2Img from '../../assets/images/rum-2.jpg'
-import room3Img from '../../assets/images/rum-3.jpg'
-import room4Img from '../../assets/images/rum-4.jpg'
-import pers from '../../assets/svg/person.svg'
-import bed from '../../assets/svg/bed.svg'
+import room1Img from '../../assets/images/rum-1.jpg';
+import room2Img from '../../assets/images/rum-2.jpg';
+import room3Img from '../../assets/images/rum-3.jpg';
+import room4Img from '../../assets/images/rum-4.jpg';
+import pers from '../../assets/svg/person.svg';
+import bed from '../../assets/svg/bed.svg';
 
 const RoomsRoot = styled.div`
   max-width: calc(1220px + 8%);
@@ -22,9 +22,9 @@ const RoomsRoot = styled.div`
   padding-top: 40px;
   padding-bottom: 40px;
 
-  @media(min-width: 720px) {
-      padding-top: 64px;
-      padding-bottom: 64px;
+  @media (min-width: 720px) {
+    padding-top: 64px;
+    padding-bottom: 64px;
   }
 `;
 
@@ -72,7 +72,7 @@ const RoomTitle = styled.p`
   font-size: 2rem;
   font-weight: bold;
 
-  @media ${breakpoints.ml} {  
+  @media ${breakpoints.ml} {
     font-size: 2.4rem;
   }
 `;
@@ -84,10 +84,10 @@ const RoomAction = styled.div`
   align-items: center;
   width: 100%;
   padding-top: 24px;
-  border-top: 1px solid #E1E1E1; 
+  border-top: 1px solid #e1e1e1;
 
   @media ${breakpoints.ml} {
-      padding-top: 32px;
+    padding-top: 32px;
   }
 `;
 
@@ -99,9 +99,9 @@ const RoomImage = styled.div`
   }
 
   img {
-      width: 100%;
-      height: 100%;;
-      object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 `;
 
@@ -126,7 +126,7 @@ const Meta = styled.span`
   margin-bottom: 20px;
   margin-right: 14px;
   font-size: 1.4rem;
-  
+
   &:before {
     position: relative;
     top: 1px;
@@ -135,23 +135,21 @@ const Meta = styled.span`
     width: 15px;
     height: 13px;
     margin-right: 5px;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     background-image: url(${props => props.img});
   }
 `;
 
-
 class Rooms extends React.PureComponent {
   state = {
-    index: 1
-  }
+    index: 1,
+  };
 
-  clickHandler = (e) => {
+  clickHandler = e => {
     e.preventDefault();
-  }
+  };
 
   getInitialValues = () => {
-
     const defaultValues = [
       {
         name: 'room1',
@@ -184,11 +182,11 @@ class Rooms extends React.PureComponent {
         price: '500 kr',
         img: room4Img,
         test: '/rum-1.jpg/',
-       }
+      },
     ];
 
     return defaultValues;
-  }
+  };
 
   render() {
     const rooms = this.getInitialValues();
@@ -209,21 +207,20 @@ class Rooms extends React.PureComponent {
             <a href="" className="Rooms__Link"><FormattedMessage id="room4.title" /></a>
           </div> */}
           <div className="Rooms__Content">
-            {rooms.map((room, index) =>
+            {rooms.map((room, index) => (
               <Room
-                  key={index}
-                  room={room}
-                  image={images[index]}
-                  index={index}
-                  active={this.state}
+                key={index}
+                room={room}
+                image={images[index]}
+                index={index}
+                active={this.state}
               />
-            )}
+            ))}
           </div>
         </RoomsContainer>
       </RoomsRoot>
-  );
+    );
   }
 }
 
 export default Rooms;
-

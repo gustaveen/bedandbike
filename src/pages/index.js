@@ -13,6 +13,7 @@ import Intro from '../components/Intro';
 import Rooms from '../components/Rooms';
 import Info from '../components/Info';
 import Amenities from '../components/Amenities';
+import Map from '../components/Map';
 
 
 const IndexPage = (props) => {
@@ -35,6 +36,7 @@ const IndexPage = (props) => {
         />
         <Amenities />
         <Info />
+        <Map />
       </Layout>
     </ThemeProvider>
   )

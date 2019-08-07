@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { breakpoints } from "../breakpoints";
+import React from 'react';
+import styled from 'styled-components';
+import { breakpoints } from '../breakpoints';
 
 const StyledButton = styled.a`
   display: inline-block;

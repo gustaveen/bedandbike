@@ -1,5 +1,5 @@
-import styled, { ThemeProvider } from "styled-components";
-import { breakpoints } from "../components/breakpoints";
+import styled, { ThemeProvider } from 'styled-components';
+import { breakpoints } from '../components/breakpoints';
 
 export const Article = styled.div`
   max-width: 1160px;
@@ -41,7 +41,7 @@ export const Item = styled.li`
   font-size: 1.6rem;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 7px;
     width: 0.7rem;

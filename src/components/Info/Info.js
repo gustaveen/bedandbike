@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { FormattedHTMLMessage } from 'react-intl';
 
 // import bike from '../../assets/svg/bike.svg'
@@ -16,7 +16,7 @@ const InfoRoot = styled.div`
     color: ${props => props.theme.palette.blue.main};
   }
 
-  @media ${breakpoints.ml} {  
+  @media ${breakpoints.ml} {
     padding-top: 48px;
     padding-bottom: 48px;
     font-size: 2.4rem;
@@ -29,8 +29,6 @@ const Info = () => {
       <FormattedHTMLMessage id="contactText" />
     </InfoRoot>
   );
-}
+};
 
 export default Info;
-
-

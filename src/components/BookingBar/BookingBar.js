@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 // import Link from 'gatsby-link'
 // import { FormattedMessage } from 'react-intl';
 
@@ -12,9 +12,9 @@ const StyledBookingBar = styled.div`
   padding-top: 24px;
   padding-bottom: 24px;
 
-  @media ${breakpoints.md} {  
-  padding-top: 32px;
-  padding-bottom: 32px;
+  @media ${breakpoints.md} {
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 `;
 
@@ -37,12 +37,12 @@ const Button = styled.a`
   font-weight: bold;
   text-transform: uppercase;
   color: white;
-  background-color: #0F69D0;
+  background-color: #0f69d0;
   text-decoration: none;
   box-shadow: 0 2px 14px rgba(0, 0, 0, 0.3);
 
   &:hover {
-  background-color: #0F69D0;
+    background-color: #0f69d0;
   }
 `;
 
@@ -53,13 +53,9 @@ const BookingBar = () => (
         Boka din vistelse redan idag
         {/* <FormattedMessage id="bookingBarTitle" /> */}
       </Title>
-      <Button
-        href="#"
-      >
-        Boka rum  
-      </Button>
+      <Button href="#">Boka rum</Button>
     </BookingBarContainer>
   </StyledBookingBar>
-)
+);
 
 export default BookingBar;
