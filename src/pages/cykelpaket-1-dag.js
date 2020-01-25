@@ -32,7 +32,7 @@ const BikeOneDay = props => (
         <Sidebar>
           <Price>
             <PriceText>Pris</PriceText>
-            <PriceAmount>700 kr/person</PriceAmount>
+            <PriceAmount>750 kr/person</PriceAmount>
           </Price>
           <SidebarTitle>Ingår i priset</SidebarTitle>
           <List>
@@ -46,9 +46,9 @@ const BikeOneDay = props => (
             <Item>Parkering 100kr</Item>
             <Item>
               Paketet kompletteras enkelt med en eller flera övernattningar
-              (dubbelrum 1050kr inkl. frukost)
+              (dubbelrum 1200kr inkl. frukost)
             </Item>
-            <Item>Barn i extrasäng 200 sek/dygn</Item>
+            <Item>Barn i extrasäng 300 sek/dygn</Item>
           </List>
         </Sidebar>
         <Content>
