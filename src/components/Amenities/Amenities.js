@@ -27,8 +27,16 @@ const Amenities = (props) => (
   <AmenitiesRoot>
     <AmenitiesContainer>
       <Content>
-        <Title><FormattedMessage id="amenitiesTitle" /></Title>
-        <Text><FormattedMessage id="amenitiesPreamlbe" /></Text>
+        <Title>
+          <FormattedMessage id="amenitiesTitle" />
+        </Title>
+        <Text>
+          <FormattedMessage id="amenitiesPreamlbe" />
+        </Text>
+        <br/>
+        <Text>
+          <FormattedMessage id="amenitiesExtra" />
+        </Text>
       </Content>
       <List>
         <Title><FormattedMessage id="facilitiesByline" /></Title>
