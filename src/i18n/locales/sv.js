@@ -15,6 +15,7 @@ module.exports = {
   amenitiesTitle: 'Så här bor du hos oss',
   amenitiesPreamlbe:
     'Vi har 3 dubbelrum och 1 enkelrum,  gemensamt allrum, pentry och WC/dusch på andra våning i ett över hundra år gammalt skärgårdshus.',
+  amenitiesExtra: 'Barn i extrasäng kostar 300kr/natt. Parkering för hela din vistelse kostar  100kr.',
   guest: 'gäst',
   guests: 'gäster',
   room: 'Våra rum',
@@ -29,7 +30,7 @@ module.exports = {
   'room4.text': 'Singelrummet intimt med pärlspont och snedtak.',
   facilitiesTitle: 'Faciliteter',
   facilitiesByline: 'Allt detta ingår i priset',
-  breakfast: 'Frukost',
+  breakfast: 'Ekologisk frukost',
   laundry: 'Tvättmaskin',
   linen: 'Lakan & handduk',
   wc: 'Dusch/WC',

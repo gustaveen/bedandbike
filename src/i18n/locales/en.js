@@ -14,6 +14,7 @@ module.exports = {
   amenitiesTitle: 'About our space',
   amenitiesPreamlbe:
     'We have 3 double rooms and a single room. You have access to the common room, pentry och WC/shower on the second floor in our sentry old villa.',
+  amenitiesExtra: 'An extra bed for kids costs 300kr/night. Parking your car for the entire stay costs 100kr.',
   guest: 'Guest',
   guests: 'Guests',
   room: 'Our rooms',
@@ -28,7 +29,7 @@ module.exports = {
   'room4.text': 'Our single room',
   facilitiesTitle: 'Amenities',
   facilitiesByline: 'This is included in your stay',
-  breakfast: 'Breakfast',
+  breakfast: 'Organic breakfast',
   laundry: 'Washing machine',
   linen: 'Bedlinen & towels',
   wc: 'Shower/WC',

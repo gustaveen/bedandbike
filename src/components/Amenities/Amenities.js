@@ -31,6 +31,10 @@ const Amenities = props => (
         <Text>
           <FormattedMessage id="amenitiesPreamlbe" />
         </Text>
+        <br/>
+        <Text>
+          <FormattedMessage id="amenitiesExtra" />
+        </Text>
       </Content>
       <List>
         <Title>
