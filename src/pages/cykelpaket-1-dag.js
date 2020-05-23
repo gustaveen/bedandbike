@@ -6,6 +6,7 @@ import { FormattedMessage } from 'react-intl';
 import theme from '../components/theme';
 import Layout from '../components/layout';
 import Hero from '../components/Hero';
+import Info from '../components/Info';
 
 import {
   Article,
@@ -109,6 +110,7 @@ const BikeOneDay = props => (
         </Content>
       </Article>
       {/* <Intro text={<FormattedMessage id="bike1Intro" />}/> */}
+      <Info />
     </Layout>
   </ThemeProvider>
 );

@@ -13,14 +13,11 @@ import Intro from '../components/Intro';
 import Rooms from '../components/Rooms';
 import Info from '../components/Info';
 import Amenities from '../components/Amenities';
-import { Banner } from '../components/Banner/Banner';
 
 const IndexPage = props => {
-  console.log(props);
   return (
     <ThemeProvider theme={theme}>
       <Layout langKey={props.pageContext.locale}>
-        <Banner />
         <Hero
           image={props.data.heroImage.childImageSharp.fluid}
           title={<FormattedMessage id="introTitle" />}

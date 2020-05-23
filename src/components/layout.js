@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 // import ThemeProvider from './ThemeProvider'
 import { StaticQuery, graphql } from 'gatsby';
 import { injectIntl } from 'react-intl';
+import { Banner } from '../components/Banner/Banner';
 
 import Header from './Header';
 import './layout.css';
@@ -31,6 +32,7 @@ const Layout = ({ children, langKey }) => (
         >
           <html lang={langKey} />
         </Helmet>
+        <Banner />
         <Header />
         <div>{children}</div>
       </>
