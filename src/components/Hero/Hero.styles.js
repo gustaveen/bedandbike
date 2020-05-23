@@ -7,33 +7,38 @@ export const HeroRoot = styled.div`
 
 export const HeroContainer = styled.div`
   position: absolute;
-  top: ${props => props.left  ? 'auto' : '50%' };
-  left: ${props => props.left  ? '0' : '50%' };
+  top: ${props => (props.left ? 'auto' : '50%')};
+  left: ${props => (props.left ? '0' : '50%')};
   width: 100%;
   text-align: center;
   color: white;
   transform: translate(-50%, -60%);
 
-  ${props => props.left && css`
-    bottom: 15%;
-    max-width: 1220px;
-    margin-left: 4%;
-    margin-right: 4%;
-    transform: none;
-  `}
+  ${props =>
+    props.left &&
+    css`
+      bottom: 15%;
+      max-width: 1220px;
+      margin-left: 4%;
+      margin-right: 4%;
+      transform: none;
+    `}
 `;
 
 export const HeroTitle = styled.h1`
-  text-align: ${props => props.left  ? 'left' : 'center' };
+  text-align: ${props => (props.left ? 'left' : 'center')};
   font-size: 4rem;
   font-weight: bold;
   line-height: 1.2;
   letter-spacing: 0.015em;
-  text-shadow: ${props => props.left ? '2px 2px 10px rgba(0,0,0,0.5)' : '0px 0px 20px rgba(0, 0, 0, 0.2)' };
-  @media ${breakpoints.sm} {  
-    font-size: calc(40px + (72 - 40) * (100vw - 480px)/ (1440 - 480));
+  text-shadow: ${props =>
+    props.left
+      ? '2px 2px 10px rgba(0,0,0,0.5)'
+      : '0px 0px 20px rgba(0, 0, 0, 0.2)'};
+  @media ${breakpoints.sm} {
+    font-size: calc(40px + (72 - 40) * (100vw - 480px) / (1440 - 480));
   }
-  @media ${breakpoints.xxl} {  
+  @media ${breakpoints.xxl} {
     font-size: 7.2rem;
   }
 `;

@@ -7,6 +7,7 @@ import theme from '../components/theme';
 import Layout from '../components/layout';
 import Hero from '../components/Hero';
 import Button from '../components/Button';
+import Info from '../components/Info';
 
 import {
   Article,
@@ -180,6 +181,7 @@ const BikeThreeDay = props => (
           </p>
         </Content>
       </Article>
+      <Info />
     </Layout>
   </ThemeProvider>
 );
