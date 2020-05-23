@@ -6,8 +6,8 @@ import { FormattedMessage, FormattedHTMLMessage } from 'react-intl';
 import theme from '../components/theme';
 // import Img from 'gatsby-image';
 
-import Layout from '../components/layout'
-import Hero from '../components/Hero'
+import Layout from '../components/layout';
+import Hero from '../components/Hero';
 // import Booking from '../components/Booking'
 import Intro from '../components/Intro';
 import Rooms from '../components/Rooms';
@@ -15,9 +15,7 @@ import Info from '../components/Info';
 import Amenities from '../components/Amenities';
 import Map from '../components/Map';
 
-
-const IndexPage = (props) => {
-  console.log(props);
+const IndexPage = props => {
   return (
     <ThemeProvider theme={theme}>
       <Layout langKey={props.pageContext.locale}>
@@ -31,7 +29,7 @@ const IndexPage = (props) => {
             props.data.room1.childImageSharp.fluid,
             props.data.room2.childImageSharp.fluid,
             props.data.room3.childImageSharp.fluid,
-            props.data.room4.childImageSharp.fluid
+            props.data.room4.childImageSharp.fluid,
           ]}
         />
         <Amenities />
@@ -39,10 +37,10 @@ const IndexPage = (props) => {
         <Map />
       </Layout>
     </ThemeProvider>
-  )
-}
+  );
+};
 
-export default withIntl(IndexPage)
+export default withIntl(IndexPage);
 
 export const pageQuery = graphql`
   query {
@@ -96,4 +94,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
