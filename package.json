@@ -8,10 +8,11 @@
     "browser-lang": "0.1.0",
     "gatsby": "^2.13.3",
     "gatsby-image": "^2.2.4",
+    "gatsby-plugin-google-tagmanager": "^2.3.3",
     "gatsby-plugin-manifest": "^2.2.1",
     "gatsby-plugin-offline": "^2.2.1",
-    "gatsby-plugin-react-helmet": "^3.1.0",
     "gatsby-plugin-postcss": "^2.1.13",
+    "gatsby-plugin-react-helmet": "^3.1.0",
     "gatsby-plugin-remove-serviceworker": "1.0.0",
     "gatsby-plugin-resolve-src": "^2.0.0",
     "gatsby-plugin-sharp": "^2.2.2",
@@ -40,8 +41,8 @@
   },
   "devDependencies": {
     "gatsby-plugin-purgecss": "^4.0.1",
-    "prettier": "1.16.1",
     "postcss-preset-env": "^6.7.0",
+    "prettier": "1.16.1",
     "pretty-quick": "^2.0.1",
     "tailwind.macro": "^1.0.0-alpha.10",
     "tailwindcss": "^1.1.2"

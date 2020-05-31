@@ -32,7 +32,7 @@ const Layout = ({ children, langKey }) => (
         >
           <html lang={langKey} />
         </Helmet>
-        <Banner />
+        {langKey === 'sv' && <Banner />}
         <Header />
         <div>{children}</div>
       </>
