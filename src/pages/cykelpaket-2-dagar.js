@@ -112,7 +112,7 @@ const BikeTwoDay = props => (
           <br />
           <p>
             Cykelpaketet är ett förslag. Ni kan tillsammans med värdparet forma
-            ert eget paket.  Hyppeln, Källö-Knippla, Kalvsund och Grötö är andra
+            ert eget paket. Hyppeln, Källö-Knippla, Kalvsund och Grötö är andra
             unika öar som man når med färja + cykel/vandring eller kajak. Dessa
             öar har också vandringsleder och underbar natur. Fantastiska
             matställen finns även på Hyppeln, Källö-Knippla och Björkö.

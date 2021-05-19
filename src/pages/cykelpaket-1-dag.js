@@ -33,7 +33,7 @@ const BikeOneDay = props => (
         <Sidebar>
           <Price>
             <PriceText>Pris</PriceText>
-            <PriceAmount>750 kr/person</PriceAmount>
+            <PriceAmount>800 kr/person</PriceAmount>
           </Price>
           <SidebarTitle>Ingår i priset</SidebarTitle>
           <List>
@@ -99,7 +99,7 @@ const BikeOneDay = props => (
           </p>
           <p>
             Cykelpaketet är ett förslag. Ni kan tillsammans med värdparet forma
-            ert eget paket.  Hyppeln, Källö-Knippla, Kalvsund och Grötö är andra
+            ert eget paket. Hyppeln, Källö-Knippla, Kalvsund och Grötö är andra
             unika öar som man når med färja + cykel/vandring eller kajak. Dessa
             öar har också vandringsleder och underbar natur.
           </p>
