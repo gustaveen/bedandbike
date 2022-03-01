@@ -46,13 +46,7 @@ const BikePage = (props) => {
         />
         <Intro text={<FormattedMessage id="bikeIntro" />}/>
         <Section>
-          <GridList columns={3}>
-            <Card
-              image={props.data.day1.childImageSharp.fluid}
-              title={<FormattedMessage id="bikeCardTitle1" />}
-              text={<FormattedMessage id="bikeCardText1" />}
-              to="/cykelpaket-1-dag"
-            />
+          <GridList columns={2}>
             <Card
               image={props.data.day2.childImageSharp.fluid}
               title={<FormattedMessage id="bikeCardTitle2" />}
