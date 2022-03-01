@@ -10,7 +10,7 @@ module.exports = {
   navPackages: 'Cykelpaket',
   introTitle: 'Välkommen till Öckerö',
   introText:
-    'Välkommen till Bed & Bike Öckerö, en pärla för aktiviteter och rekreation. Hos oss kan du njuta av husets lugn, vackra rum och god frukost. Du kan hyra cykel och kajak. Vi kan erbjuda förslag på turer såväl med <strong>cykel</strong>, <strong>kajak</strong> som <strong>vandring</strong>.',
+    'Välkommen till Bed & Bike Öckerö, en pärla för aktiviteter och rekreation. Hos oss kan du njuta av husets lugn, vackra rum och god frukost. Hos oss kan självklart hyra cykel. Vi kan erbjuda förslag på turer såväl med <strong>cykel</strong>, <strong>kajak</strong> som <strong>vandring</strong>.',
   accomodationTitle: 'Våra rum',
   amenitiesTitle: 'Så här bor du hos oss',
   amenitiesPreamlbe:

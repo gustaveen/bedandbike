@@ -9,7 +9,7 @@ module.exports = {
   navPackages: 'Packages',
   introTitle: 'Welcome to Öckerö',
   introText:
-    'Come stay in a century old villa in the beautiful northern archipelago of Gothenburg. Enjoy our convenient rooms, a delicious homemade breakfast and the calmness of the island. We also provide <strong>bikes</strong> and <strong>kayaks</strong> for rent. We love to show you around.',
+    'Come stay in a century old villa in the beautiful northern archipelago of Gothenburg. Enjoy our convenient rooms, a delicious homemade breakfast and the calmness of the island. We also provide <strong>bikes</strong> for rent. We love to show you around.',
   accomodationTitle: 'Our rooms',
   amenitiesTitle: 'About our space',
   amenitiesPreamlbe:
