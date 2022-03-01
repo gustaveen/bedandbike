@@ -35,7 +35,7 @@ const BikeThreeDay = props => (
         <Sidebar>
           <Price>
             <PriceText>Pris</PriceText>
-            <PriceAmount>3700 kr/person</PriceAmount>
+            <PriceAmount>3950 kr/person</PriceAmount>
           </Price>
           <SidebarTitle>Ingår i priset</SidebarTitle>
           <List>
