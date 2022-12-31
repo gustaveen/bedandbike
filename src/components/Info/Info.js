@@ -14,6 +14,9 @@ const InfoRoot = styled.div`
 
   a {
     color: ${props => props.theme.palette.blue.main};
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   @media ${breakpoints.ml} {

@@ -7,14 +7,15 @@ module.exports = {
   navFindUs: 'Getting here',
   navActivities: 'Things to do',
   navPackages: 'Packages',
-  introTitle: 'Welcome to Öckerö',
+  introTitle: 'Welcome to Bed & Bike Öckerö',
   introText:
     'Come stay in a century old villa in the beautiful northern archipelago of Gothenburg. Enjoy our convenient rooms, a delicious homemade breakfast and the calmness of the island. We also provide <strong>bikes</strong> for rent. We love to show you around.',
   accomodationTitle: 'Our rooms',
   amenitiesTitle: 'About our space',
   amenitiesPreamlbe:
     'We have 3 double rooms and a single room. You have access to the common room, pentry och WC/shower on the second floor in our sentry old villa.',
-  amenitiesExtra: 'An extra bed for kids costs 300kr/night. Parking your car for the entire stay costs 100kr.',
+  amenitiesExtra:
+    'An extra bed for kids costs 300kr/night. Parking your car for the entire stay costs 100kr.',
   guest: 'Guest',
   guests: 'Guests',
   room: 'Our rooms',
@@ -59,5 +60,5 @@ module.exports = {
   alwaysIncluded: 'Always included',
   bikePackage: 'Bicycle package',
   bikeIntro:
-    'Öckeröarna breder ut sig som ett pärlband mot Västerhavet mellan Vinga och Marstrand, i Göteborgs norra skärgård. Var och en av de tio öarna har sin egen karaktär och som du med fördel upplever från cykelsadeln. För att hitta guldkornen har vi satt samman en eller flera dagars cykelpaket. Förutom cykling får du uppleva vandring, god mat, fina båtturer och öarnas spännande historia.',
+    'Öckeröarna breder ut sig som ett pärlband mot Västerhavet mellan Vinga och Marstrand, i Göteborgs norra skärgård. Var och en av de tio öarna har sin egen karaktär och som du med fördel upplever från cykelsadeln. För att hitta guldkornen har vi satt samman ett 3-dagars cykelpaket. Förutom cykling får du uppleva vandring, god mat, fina båtturer och öarnas spännande historia.',
 };
