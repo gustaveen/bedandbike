@@ -8,14 +8,15 @@ module.exports = {
   navFindUs: 'Hitta hit',
   navActivities: 'Aktiviteter',
   navPackages: 'Cykelpaket',
-  introTitle: 'Välkommen till Öckerö',
+  introTitle: 'Välkommen till Bed & Bike Öckerö',
   introText:
-    'Välkommen till Bed & Bike Öckerö, en pärla för aktiviteter och rekreation. Hos oss kan du njuta av husets lugn, vackra rum och god frukost. Hos oss kan självklart hyra cykel. Vi kan erbjuda förslag på turer såväl med <strong>cykel</strong>, <strong>kajak</strong> som <strong>vandring</strong>.',
+    'Välkommen till Bed & Bike Öckerö, en pärla för aktiviteter och rekreation. Hos oss kan du njuta av husets lugn, vackra rum och god frukost. Hos oss kan självklart hyra cykel. Vi kan erbjuda förslag på turer såväl med <strong>cykel</strong>, <strong>kajak</strong> som <strong>vandring</strong>. För att uppleva guldkornen har vi satt samman ett <a href="/sv/cykelpaket">3-dagars cykelpaket.</a>',
   accomodationTitle: 'Våra rum',
   amenitiesTitle: 'Så här bor du hos oss',
   amenitiesPreamlbe:
     'Vi har 3 dubbelrum och 1 enkelrum,  gemensamt allrum, pentry och WC/dusch på andra våning i ett över hundra år gammalt skärgårdshus.',
-  amenitiesExtra: 'Barn i extrasäng kostar 300kr/natt. Parkering för hela din vistelse kostar  100kr.',
+  amenitiesExtra:
+    'Barn i extrasäng kostar 300kr/natt. Parkering för hela din vistelse kostar  100kr.',
   guest: 'gäst',
   guests: 'gäster',
   room: 'Våra rum',
@@ -60,7 +61,7 @@ module.exports = {
   alwaysIncluded: 'Ingår alltid',
   bikePackage: 'Cykelpaket',
   bikeIntro:
-    'Öckeröarna breder ut sig som ett pärlband mot Västerhavet mellan Vinga och Marstrand, i Göteborgs norra skärgård. Var och en av de tio öarna har sin egen karaktär och som du med fördel upplever från cykelsadeln. För att hitta guldkornen har vi satt samman en eller flera dagars cykelpaket. Förutom cykling får du uppleva vandring, god mat, fina båtturer och öarnas spännande historia.',
+    'Öckeröarna breder ut sig som ett pärlband mot Västerhavet mellan Vinga och Marstrand, i Göteborgs norra skärgård. Var och en av de tio öarna har sin egen karaktär och som du med fördel upplever från cykelsadeln. För att hitta guldkornen har vi satt samman ett 3-dagars cykelpaket. Förutom cykling får du uppleva vandring, god mat, fina båtturer och öarnas spännande historia.',
   bikeCardTitle1: 'Cykelpaket - 1 dag',
   bikeCardText1:
     'Denna dag får du via cykel och båt uppleva några av våra vackra öar. På fiskemuseet kan du få reda på hur vi levt och lever våra liv här ute. Du äter en fantastisk sommarlunch på vår fiskrestaurang i Klåva. Under den guidade båtturen ut till Vinga får du lyssna till skepparens spännande historier.',

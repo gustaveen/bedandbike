@@ -23,14 +23,9 @@ import {
   Booking,
 } from '../components/cykelpaket.styles';
 
-const BikeThreeDay = props => (
-  <ThemeProvider theme={theme}>
-    <Layout langKey={props.pageContext.locale}>
-      <Hero
-        image={props.data.heroImage.childImageSharp.fluid}
-        left
-        title={<FormattedMessage id="bikeCardTitle3" />}
-      />
+export const BikeThreeDay = props => {
+  return (
+    <ThemeProvider theme={theme}>
       <Article>
         <Sidebar>
           <Price>
@@ -182,9 +177,9 @@ const BikeThreeDay = props => (
         </Content>
       </Article>
       <Info />
-    </Layout>
-  </ThemeProvider>
-);
+    </ThemeProvider>
+  );
+};
 
 export default withIntl(BikeThreeDay);
 

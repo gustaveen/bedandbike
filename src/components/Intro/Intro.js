@@ -41,6 +41,13 @@ const IntroText = styled.h2`
   padding-left: 2rem;
   padding-right: 2rem;
 
+  a {
+    color: ${props => props.theme.palette.blue.main};
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   @media ${breakpoints.md} {
     font-size: 2rem;
   }
