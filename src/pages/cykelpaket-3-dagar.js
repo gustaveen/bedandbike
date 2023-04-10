@@ -36,9 +36,8 @@ export const BikeThreeDay = props => {
           <List>
             <Item>3 övernattningar i dubbelrum</Item>
             <Item>Lakan, handduk och städning</Item>
-            <Item>Lunchpaket (dag 1 och 2)</Item>
-            <Item>Frukost (dag 1 - 3 )</Item>
-            <Item>Middag (dag 1 exkl. dryck)</Item>
+            <Item>Frukost (dag 1 - 3)</Item>
+            <Item>Lunchpaket (dag 1 - 3)</Item>
             <Item>Guidad båttur till Vinga (2.5h)</Item>
             <Item>Karta och guide</Item>
           </List>
@@ -81,12 +80,11 @@ export const BikeThreeDay = props => {
             naturreservatet med fantastiska vandringsleder. Här sträcker sig
             stora klapperstensfält mot väst och mot syd en badvänlig sandstrand
             och har du tur kan du träffa vildhästarna och fåren som betar på
-            ljunghedarna. På vägen hem stannar ni till på Evas på Hälsö och
-            avnjuter er middag.
+            ljunghedarna.
           </p>
           <List>
             <Item>Logi: Bed & Bike Öckerö</Item>
-            <Item>Måltider: Lunchpaket och middag</Item>
+            <Item>Måltider: Lunchpaket</Item>
             <Item>Cykling c:a 25 km och vandring (hela rundan 12 km)</Item>
           </List>
           <br />
@@ -109,7 +107,7 @@ export const BikeThreeDay = props => {
             svalkande dusch är det dags att cykla ner till restaurangerna i
             Klåva där vi kan rekommendera Tullhuset med fantastiska fiskrätter
             eller någon av de andra restaurangerna såsom Franses Skärgårdspub,
-            Haralds restaurang, Lilling Cottage och Trubaduren.
+            Lilling Cottage, Klova Hamnkrog, Skärgårdshotellet och Trubaduren.
           </p>
           <List>
             <Item>Logi: Bed & Bike Öckerö</Item>
@@ -130,7 +128,8 @@ export const BikeThreeDay = props => {
             er, via kobbar och skär, ut på en mycket uppskattad och spännande
             guidad tur till Vinga. Turen tar 2.5 timmar så det finns tid för
             shopping och ett besök på öns fiskemuseum som visar livet på
-            Öckerö-öarna över tid.
+            Öckerö-öarna över tid. Efter avslutad båttur intar ni er lunch på
+            restaurang Trubaduren.
           </p>
           <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
             <iframe
