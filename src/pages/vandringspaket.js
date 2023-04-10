@@ -188,7 +188,7 @@ export default withIntl(HikePage);
 
 export const query = graphql`
   query {
-    heroImage: file(relativePath: { regex: "/bike-trail/" }) {
+    heroImage: file(relativePath: { regex: "/vandring-hero/" }) {
       childImageSharp {
         fluid(maxWidth: 1900) {
           ...GatsbyImageSharpFluid
