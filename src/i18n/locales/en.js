@@ -59,6 +59,7 @@ module.exports = {
     'Do you have any other questions? Send us an email to <a href="mailto:bedandbikeockero@gmail.com">bedandbikeockero@gmail.com</a>',
   alwaysIncluded: 'Always included',
   bikePackage: 'Bicycle package',
+  hikePackage: 'Hike package',
   bikeIntro:
     'Öckeröarna breder ut sig som ett pärlband mot Västerhavet mellan Vinga och Marstrand, i Göteborgs norra skärgård. Var och en av de tio öarna har sin egen karaktär och som du med fördel upplever från cykelsadeln. För att hitta guldkornen har vi satt samman ett 3-dagars cykelpaket. Förutom cykling får du uppleva vandring, god mat, fina båtturer och öarnas spännande historia.',
 };
