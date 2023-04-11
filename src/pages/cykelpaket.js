@@ -40,7 +40,6 @@ const BikePage = props => {
         <Intro text={<FormattedMessage id="bikeIntro" />} />
         <Section>
           <BikeThreeDay />
-          {/* <div style={{padding:'56.25% 0 0 0',position:'relative'}}><iframe src="https://player.vimeo.com/video/312052598?autoplay=1&title=0&byline=0&portrait=0" style={{position:'absolute',top:'0',left:'0',width:'100%',height:'100%'}} frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script> */}
         </Section>
       </Layout>
     </ThemeProvider>
@@ -51,7 +50,7 @@ export default withIntl(BikePage);
 
 export const query = graphql`
   query {
-    heroImage: file(relativePath: { regex: "/bike-trail/" }) {
+    heroImage: file(relativePath: { regex: "/boat-and-bike-16_9/" }) {
       childImageSharp {
         fluid(maxWidth: 1900) {
           ...GatsbyImageSharpFluid

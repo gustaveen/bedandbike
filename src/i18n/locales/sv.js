@@ -73,4 +73,7 @@ module.exports = {
     'Varför inte uppleva fler av våra fantastiska öar och stanna ytterligare några dagar och få möjlighet att uppleva våra öars skiftande karaktärer. Du bor bekvämt i vårt vackra skärgårdshus. Efter den hemlagade frukosten går värden genom dagens rutt.',
   bike1Intro:
     'Välkommen till en dags ”ö-luffning" på några av Öckerös 10 öar. Du tar dig fram med cykel, båt och till fots.',
+  hikePackage: 'Vandringspaket',
+  hikeIntro:
+    'Kom ut till oss för några dagars vandring i havsnära natur på Öckerööarna. Skärgårdsleden som är en del av Kuststigen sträcker sig från från Fotö i söder till Hälsö i norr. Våra tre nordöar stoltserar med ytterligare vacker vandring, Rörö med sina klapperstensfält, Hyppeln med mäktig västsida samt lummig ostsida med dungar av enar och en skyddad sandstrand. Vandringen på Källlö Knipplas västsida bjuder på en hänförande utsikt ut mot det mäktiga västerhavet.',
 };

@@ -11,7 +11,16 @@ const NavMain = props => (
         className="NavMain__ItemLink"
         activeClassName="NavMain__ItemLink--Active"
       >
-        <FormattedMessage id="navPackages" />
+        <FormattedMessage id="bikePackage" />
+      </ItemLink>
+    </Item>
+    <Item>
+      <ItemLink
+        to={`/vandringspaket`}
+        className="NavMain__ItemLink"
+        activeClassName="NavMain__ItemLink--Active"
+      >
+        <FormattedMessage id="hikePackage" />
       </ItemLink>
     </Item>
   </List>
