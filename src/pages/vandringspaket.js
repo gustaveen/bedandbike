@@ -113,7 +113,7 @@ export const HikeText = props => {
             <Item>
               Måltider: Frukost och lunchpaket (alternativt lunch på Tullhuset)
             </Item>
-            <Item>Vandring 12-20 km</Item>
+            <Item>Vandring 8,5 - 12km</Item>
           </List>
           <br />
           <h3>Dag 3</h3>
